@@ -1,0 +1,15 @@
+<magicpwd>
+    <look group="">
+        <item id="item1" text="" tips="" type="java/user" class="" decorated="true/false" platform="win/lin/mac" >
+            <resource>
+                <font for="" font-file="" font-name="" font-size="" font-style="" />
+                <color for="" rgb="" a="" r="" g="" b="" />
+                <boolean for="" value="" />
+            </resource>
+            <property>
+                <string key="" value=""/>
+            </property>
+        </item>
+        <item id="item2" text="" tips="" class="" type="java/user" decorated="true/false" />
+    </look>
+</magicpwd>

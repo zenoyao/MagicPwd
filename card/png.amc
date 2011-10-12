@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicpwd>
+    <base>
+        <name>点阵格式</name>
+        <type>png</type>
+    </base>
+    <card>
+        <base width="400" height="240" background-color="#00ffff" background-image="card/amon/line.png" background-image-style="repeat" />
+        <draw method="image" x="15" y="15" width="" height="">http://amon.me/logo/amon/logo32.png</draw>
+        <draw method="text" x="55" y="32" font-name="宋体" font-size="20" font-style="1">#公司#</draw>
+        <draw method="text" x="55" y="45" color="#000000" font-name="宋体" font-size="12" font-style="0">#公司网站#</draw>
+        <draw method="text" x="160" y="105" color="#000000" font-name="黑体" font-size="32" font-style="1">#姓##名#</draw>
+        <draw method="line" x1="270" y1="75" x2="270" y2="113" width="1" color="#666666"></draw>
+        <draw method="text" x="280" y="105" color="#000000" font-name="宋体" font-size="32" font-style="1">#昵称#</draw>
+        <draw method="text" x="280" y="140" color="#000000" font-name="宋体" font-size="18">#职位#</draw>
+        <draw method="rect" x="0" y="160" width="400" height="20" color="#DDDDDD" />
+        <draw method="text" x="20" y="174" color="#000000" font-name="宋体" font-size="12" font-style="1">#工作地址#</draw>
+        <draw method="text" x="20" y="195" color="#000000" font-name="宋体" font-size="12">电话：#商务电话#</draw>
+        <draw method="text" x="20" y="211" color="#000000" font-name="宋体" font-size="12">传真：#商务传真#</draw>
+        <draw method="text" x="20" y="227" color="#000000" font-name="宋体" font-size="12">邮件：#工作邮件#</draw>
+    </card>
+</magicpwd>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicpwd>
+    <!--魔方密码工具栏-->
+    <toolbar id="mwiz">
+        <item type="normal" text="$P30F6701" text-def="查看" tips="$P30F6702" tips-def="查看选择的记录">
+            <icon>
+                <default id="view-keys" path="var:mwiz-view"/>
+            </icon>
+            <action id="view-keys" class="com.magicpwd.e.mwiz.ViewAction">
+                <stroke key="^ V" />
+            </action>
+        </item>
+        <seperator />
+        <item type="normal" text="$P30F6703" text-def="新增" tips="$P30F6704" tips-def="新增记录">
+            <icon>
+                <default id="new-keys" path="var:mwiz-add"/>
+            </icon>
+            <action id="new-keys" class="com.magicpwd.e.mwiz.NewAction">
+                <stroke key="^ N" />
+            </action>
+        </item>
+        <item type="normal" text="$P30F6705" text-def="编辑" tips="$P30F6706" tips-def="编辑选择的记录">
+            <icon>
+                <default id="edit-keys" path="var:mwiz-edit"/>
+            </icon>
+            <action id="edit-keys" class="com.magicpwd.e.mwiz.EditAction">
+                <stroke key="^ E" />
+            </action>
+        </item>
+        <item type="normal" text="$P30F6707" text-def="删除" tips="$P30F6708" tips-def="删除选择的记录">
+            <icon>
+                <default id="delete-keys" path="var:mwiz-delete"/>
+            </icon>
+            <action id="delete-keys" class="com.magicpwd.e.mwiz.DeleteAction">
+                <stroke key="^ D" />
+            </action>
+        </item>
+        <seperator />
+        <item id="hint" type="toggle" text="$P30F6709" text-def="提醒" tips="$P30F670A" tips-def="查看提醒">
+            <icon>
+                <default id="hint-keys" path="var:mwiz-hint"/>
+            </icon>
+            <action id="hint-keys" class="com.magicpwd.e.mwiz.HintAction">
+                <stroke key="^ R" />
+            </action>
+        </item>
+        <item id="find" type="toggle" text="$P30F670B" text-def="查找" tips="$P30F670C" tips-def="查找记录">
+            <icon>
+                <default id="search-keys" path="var:mwiz-find"/>
+            </icon>
+            <action id="search-keys" class="com.magicpwd.e.mwiz.FindAction">
+                <stroke key="^ F" />
+            </action>
+        </item>
+    </toolbar>
+    <popmenu id="mwiz">
+        <item type="normal" text="$P30F6D01" text-def="查看记录">
+            <action id="view-keys" class="com.magicpwd.e.mwiz.ViewAction" />
+        </item>
+        <seperator />
+        <item type="normal" text="$P30F6D02" text-def="添加记录">
+            <action id="new-keys" class="com.magicpwd.e.mwiz.NewAction" />
+        </item>
+        <item type="normal" text="$P30F6D03" text-def="更新记录">
+            <action id="edit-keys" class="com.magicpwd.e.mwiz.EditAction" />
+        </item>
+        <item type="normal" text="$P30F6D04" text-def="删除记录">
+            <action id="delete-keys" class="com.magicpwd.e.mwiz.DeleteAction" />
+        </item>
+        <seperator />
+        <item type="normal" text="邮件检测" text-def="邮件检测">
+            <action id="check-mail" class="com.magicpwd.e.mwiz.MailAction" />
+        </item>
+        <seperator />
+        <menu text="$P30F7D1B" text-def="标记为：">
+            <item type="checkbox" text="$P30F7D1C" text-def="默认(@0)" group="label" command="0">
+                <icon>
+                    <default cache-id="label0" path="var:keys-label0"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mwiz.ChangeLabelAction" />
+            </item>
+            <seperator />
+            <item type="checkbox" text="$P30F7D1D" text-def="常使用(@1)" group="label" command="1">
+                <icon>
+                    <default cache-id="label1" path="var:keys-label1"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mwiz.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D1E" text-def="待注册(@2)" group="label" command="2">
+                <icon>
+                    <default cache-id="label2" path="var:keys-label2"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mwiz.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D1F" text-def="待认证(@3)" group="label" command="3">
+                <icon>
+                    <default cache-id="label3" path="var:keys-label3"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mwiz.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D20" text-def="待激活(@4)" group="label" command="4">
+                <icon>
+                    <default cache-id="label4" path="var:keys-label4"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mwiz.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D21" text-def="仅测试(@5)" group="label" command="5">
+                <icon>
+                    <default cache-id="label5" path="var:keys-label5"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mwiz.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D22" text-def="已过期(@6)" group="label" command="6">
+                <icon>
+                    <default cache-id="label6" path="var:keys-label6"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mwiz.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D23" text-def="已丢失(@7)" group="label" command="7">
+                <icon>
+                    <default cache-id="label7" path="var:keys-label7"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mwiz.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D24" text-def="被禁用(@8)" group="label" command="8">
+                <icon>
+                    <default cache-id="label8" path="var:keys-label8"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mwiz.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D25" text-def="已删除(@9)" group="label" command="9">
+                <icon>
+                    <default cache-id="label9" path="var:keys-label9"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mwiz.ChangeLabelAction" />
+            </item>
+        </menu>
+        <menu text="$P30F7D26" text-def="重要性：">
+            <item type="checkbox" text="$P30F7D27" text-def="最高" group="major" command="2">
+                <icon>
+                    <default cache-id="major+2" path="var:keys-major+2"/>
+                </icon>
+                <action id="change-note" class="com.magicpwd.e.mwiz.ChangeMajorAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D28" text-def="高" group="major" command="1">
+                <icon>
+                    <default cache-id="major+1" path="var:keys-major+1"/>
+                </icon>
+                <action id="change-note" class="com.magicpwd.e.mwiz.ChangeMajorAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D29" text-def="正常" group="major" command="0">
+                <icon>
+                    <default cache-id="major0" path="var:keys-major0"/>
+                </icon>
+                <action id="change-note" class="com.magicpwd.e.mwiz.ChangeMajorAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D2A" text-def="低" group="major" command="-1">
+                <icon>
+                    <default cache-id="major-1" path="var:keys-major-1"/>
+                </icon>
+                <action id="change-note" class="com.magicpwd.e.mwiz.ChangeMajorAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D2B" text-def="最低" group="major" command="-2">
+                <icon>
+                    <default cache-id="major-2" path="var:keys-major-2"/>
+                </icon>
+                <action id="change-note" class="com.magicpwd.e.mwiz.ChangeMajorAction" />
+            </item>
+        </menu>
+        <menu text="$P30F7D2C" text-def="排序方式">
+            <item type="checkbox" text="$P30F7D2D" text-def="升序" group="order-dir" command="true">
+                <action id="sort-dir" class="com.magicpwd.e.mwiz.SortDirAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D2E" text-def="降序" group="order-dir" command="false">
+                <action id="sort-dir" class="com.magicpwd.e.mwiz.SortDirAction" />
+            </item>
+        </menu>
+        <menu text="$P30F7D2F" text-def="排序依据">
+            <item type="checkbox" text="$P30F7D30" text-def="使用频率" group="order-key" command="01">
+                <action id="sort-key" class="com.magicpwd.e.mwiz.SortKeyAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D31" text-def="口令名称" group="order-key" command="09">
+                <action id="sort-key" class="com.magicpwd.e.mwiz.SortKeyAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D32" text-def="注册时间" group="order-key" command="07">
+                <action id="sort-key" class="com.magicpwd.e.mwiz.SortKeyAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D33" text-def="到期时间" group="order-key" command="0D">
+                <action id="sort-key" class="com.magicpwd.e.mwiz.SortKeyAction" />
+            </item>
+        </menu>
+    </popmenu>
+    <!--日期弹出菜单选项-->
+    <submenu id="date-template">
+        <!--日期及时间-->
+        <menu text="日期时间型">
+            <item type="checkbox" text="完整格式" group="date-template" command="java:0d0t" />
+            <item type="checkbox" text="长格式" group="date-template" command="java:1d1t" />
+            <item type="checkbox" text="标准格式" group="date-template" command="java:2d2t" />
+            <item type="checkbox" text="短格式" group="date-template" command="java:3d3t" />
+            <seperator />
+            <item type="checkbox" text="yyyyMMdd HHmmss 格式" group="date-template" command="user:yyyyMMdd HHmmss" />
+            <item type="checkbox" text="yyyy-MM-dd HH:mm:ss 格式" group="date-template" command="user:yyyy-MM-dd HH:mm:ss" />
+            <item type="checkbox" text="yyyy.MM.dd HH.mm.ss 格式" group="date-template" command="user:yyyy.MM.dd HH.mm.ss" />
+            <item type="checkbox" text="yyyy年MM月dd日 HH时mm分ss秒 格式" group="date-template" command="user:yyyy年MM月dd日 HH时mm分ss秒" />
+        </menu>
+        <!--日期-->
+        <menu text="日期型">
+            <!--系统定义-->
+            <item type="checkbox" text="完整格式" group="date-template" command="java:0d" />
+            <item type="checkbox" text="长格式" group="date-template" command="java:1d" />
+            <item type="checkbox" text="标准格式" group="date-template" command="java:2d" />
+            <item type="checkbox" text="短格式" group="date-template" command="java:3d" />
+            <seperator />
+            <!--用户定义-->
+            <item type="checkbox" text="yyyyMMdd 格式" group="date-template" command="user:yyyyMMdd" />
+            <item type="checkbox" text="yyyy-MM-dd 格式" group="date-template" command="user:yyyy-MM-dd" />
+            <item type="checkbox" text="yyyy/MM/dd 格式" group="date-template" command="user:yyyy/MM/dd" />
+            <item type="checkbox" text="yyyy.MM.dd 格式" group="date-template" command="user:yyyy.MM.dd" />
+            <item type="checkbox" text="yyyy MM dd 格式" group="date-template" command="user:yyyy MM dd" />
+            <item type="checkbox" text="yyyy年MM月dd日 格式" group="date-template" command="user:yyyy年MM月dd日" />
+        </menu>
+        <!--时间-->
+        <menu text="时间型">
+            <item type="checkbox" text="完整格式" group="date-template" command="java:0t" />
+            <item type="checkbox" text="长格式" group="date-template" command="java:1t" />
+            <item type="checkbox" text="标准格式" group="date-template" command="java:2t" />
+            <item type="checkbox" text="短格式" group="date-template" command="java:3t" />
+            <seperator />
+            <item type="checkbox" text="HHmmss 格式" group="date-template" command="user:HHmmss" />
+            <item type="checkbox" text="HH:mm:ss 格式" group="date-template" command="user:HH:mm:ss" />
+            <item type="checkbox" text="HH.mm.ss 格式" group="date-template" command="user:HH.mm.ss" />
+            <item type="checkbox" text="HH mm ss 格式" group="date-template" command="user:HH mm ss" />
+            <item type="checkbox" text="HH时mm分ss秒 格式" group="date-template" command="user:HH时mm分ss秒" />
+        </menu>
+    </submenu>
+    <submenu id="date-interval">
+        <item type="normal" text="09:30" command="now:date 09:30:00" />
+        <item type="normal" text="18:00" command="now:date 18:00:00" />
+        <seperator />
+        <!--
+        <item type="normal" text="2010-12-31 20:00:00" command="fix:2010-12-31 20:00:00" />
+        <seperator />
+        -->
+        <menu text="秒">
+            <item type="normal" text="30秒后" command="var:+30second" />
+        </menu>
+        <menu text="分">
+            <item type="normal" text="30分后" command="var:+30minute" />
+        </menu>
+        <menu text="时">
+            <item type="normal" text="1小时后" command="var:+1hour" />
+            <item type="normal" text="2小时后" command="var:+2hour" />
+        </menu>
+        <menu text="天">
+            <item type="normal" text="1天后" command="var:+1day" />
+            <item type="normal" text="2天后" command="var:+2day" />
+        </menu>
+        <menu text="周">
+            <item type="normal" text="1周后" command="var:+1week" />
+            <item type="normal" text="2周后" command="var:+2week" />
+        </menu>
+        <menu text="月">
+            <item type="normal" text="1月后" command="var:+1month" />
+            <item type="normal" text="2月后" command="var:+2month" />
+        </menu>
+        <menu text="年">
+            <item type="normal" text="1年后" command="var:+1year" />
+            <item type="normal" text="2年后" command="var:+2year" />
+        </menu>
+    </submenu>
+    <!--数值弹出菜单选项-->
+    <submenu id="data-options">
+        <item type="checkbox" text="$P30F7C09" text-def="整数" group="data-template" command="dec:0" />
+        <menu text="$P30F7C0A" text-def="小数">
+            <item type="checkbox" text="1位" group="data-template" command="dec:1" />
+            <item type="checkbox" text="2位" group="data-template" command="dec:2" />
+            <item type="checkbox" text="3位" group="data-template" command="dec:3" />
+            <item type="checkbox" text="4位" group="data-template" command="dec:4" />
+            <item type="checkbox" text="5位" group="data-template" command="dec:5" />
+            <item type="checkbox" text="6位" group="data-template" command="dec:6" />
+            <seperator />
+            <item type="checkbox" id="data-precision" text="$P30F7C0B" text-def="其它……" group="data-template" command="dec:-1" />
+            <seperator />
+            <item type="checkbox" id="data-fixed-dec" text="$P30F7C17" text-def="固定小数长度" command="dec:f" />
+            <!--
+            <item type="checkbox" id="data-fixed-int" text="$P30F7C18" command="int:f" />
+            -->
+        </menu>
+        <menu text="$P30F7C0C" text-def="集合">
+            <item type="checkbox" id="data-pos" text="$P30F7C0D" text-def="正数" command="set:+" />
+            <item type="checkbox" id="data-0" text="$P30F7C0E" text-def="0" command="set:0" />
+            <item type="checkbox" id="data-nav" text="$P30F7C0F" text-def="负数" command="set:-" />
+        </menu>
+        <menu text="$P30F7C10" text-def="符号">
+            <item type="checkbox" id="data-notation" text="$P30F7C11" text-def="启用特殊符号" command="notation"/>
+            <seperator />
+            <item type="normal" id="data-character" tips="$P30F7C13" tips-def="更改特殊符号" command="character"/>
+            <item type="checkbox" id="data-thehead" text="$P30F7C14" text-def="符号前置" group="data-position" command="pos:^" />
+            <item type="checkbox" id="data-thefoot" text="$P30F7C15" text-def="符号后置" group="data-position" command="pos:$" />
+            <item type="checkbox" id="data-optional" text="$P30F7C16" text-def="可选输入" command="optional"/>
+        </menu>
+    </submenu>
+    <!--文件查看菜单-->
+    <submenu id="file-preview">
+        <item type="normal" text="图像查看器" text-def="图像查看器" init="com.magicpwd.x.docs.ImgViewer:PNG,JPG,JPEG,JFIF,GIF,BMP" />
+        <item type="normal" text="源码查看器" text-def="源码查看器" init="com.magicpwd.x.docs.SrcViewer:JAVA,CS,JS,CSS" />
+        <item type="normal" text="文本查看器" text-def="文本查看器" init="com.magicpwd.x.docs.TxtViewer:TXT,RTF,TEXT,HTML,HTM,XML" />
+    </submenu>
+    <strokes id="mwiz">
+        <action id="exit-window" class="com.magicpwd.e.mwiz.ExitAction">
+            <stroke key="^ Q" />
+        </action>
+        <action id="lock-window" class="com.magicpwd.e.mwiz.LockAction">
+            <stroke key="^ L" />
+        </action>
+        <action id="hide-window" class="com.magicpwd.e.mwiz.HideAction">
+            <stroke key="^ H" />
+            <stroke key="^ Enter" />
+        </action>
+        <action id="show-mpro" class="com.magicpwd.e.tray.MproAction">
+            <stroke key="^ # P" />
+        </action>
+        <action id="show-mpad" class="com.magicpwd.e.tray.MpadAction">
+            <stroke key="^ # N" />
+        </action>
+    </strokes>
+</magicpwd>

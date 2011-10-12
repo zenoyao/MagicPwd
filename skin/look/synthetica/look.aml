@@ -1,0 +1,17 @@
+<magicpwd>
+    <look group="Synthetica">
+        <item id="SyntheticaStandard" text="Synthetica Standard" tips="Synthetica Standard" type="user" class="de.javasoft.plaf.synthetica.SyntheticaStandardLookAndFeel" decorated="true" />
+        <item id="SyntheticaBlackMoon" text="Synthetica Black Moon" tips="Synthetica Black Moon" type="user" class="de.javasoft.plaf.synthetica.SyntheticaBlackMoonLookAndFeel" decorated="true" />
+        <item id="SyntheticaBlackStar" text="Synthetica Black Star" tips="Synthetica Black Star" type="user" class="de.javasoft.plaf.synthetica.SyntheticaBlackStarLookAndFeel" decorated="true" />
+        <item id="SyntheticaBlueIce" text="Synthetica Blue Ice" tips="Synthetica Blue Ice" type="user" class="de.javasoft.plaf.synthetica.SyntheticaBlueIceLookAndFeel" decorated="true" />
+        <item id="SyntheticaBlueMoon" text="Synthetica Blue Moon" tips="Synthetica Blue Moon" type="user" class="de.javasoft.plaf.synthetica.SyntheticaBlueMoonLookAndFeel" decorated="true" />
+        <item id="SyntheticaBlueSteel" text="Synthetica Blue Steel" tips="Synthetica Blue Steel" type="user" class="de.javasoft.plaf.synthetica.SyntheticaBlueSteelLookAndFeel" decorated="true" />
+        <item id="SyntheticaGreenDream" text="Synthetica Green Dream" tips="Synthetica Green Dream" type="user" class="de.javasoft.plaf.synthetica.SyntheticaGreenDreamLookAndFeel" decorated="true" />
+        <item id="SyntheticaMauveMetallic" text="Synthetica Mauve Metallic" tips="Synthetica Mauve Metallic" type="user" class="de.javasoft.plaf.synthetica.SyntheticaMauveMetallicLookAndFeel" decorated="true" />
+        <item id="SyntheticaOrangeMetallic" text="Synthetica Orange Metallic" tips="Synthetica Orange Metallic" type="user" class="de.javasoft.plaf.synthetica.SyntheticaOrangeMetallicLookAndFeel" decorated="true" />
+        <item id="SyntheticaSilverMoon" text="Synthetica Silver Moon" tips="Synthetica Silver Moon" type="user" class="de.javasoft.plaf.synthetica.SyntheticaSilverMoonLookAndFeel" decorated="true" />
+        <item id="SyntheticaSimple2D" text="Synthetica Simple 2D" tips="Synthetica Simple 2D" type="user" class="de.javasoft.plaf.synthetica.SyntheticaSimple2DLookAndFeel" decorated="true" />
+        <item id="SyntheticaSkyMetallic" text="Synthetica Sky Metallic" tips="Synthetica Sky Metallic" type="user" class="de.javasoft.plaf.synthetica.SyntheticaSkyMetallicLookAndFeel" decorated="true" />
+        <item id="SyntheticaWhiteVision" text="Synthetica White Vision" tips="Synthetica White Vision" type="user" class="de.javasoft.plaf.synthetica.SyntheticaWhiteVisionLookAndFeel" decorated="true" />
+    </look>
+</magicpwd>

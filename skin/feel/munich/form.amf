@@ -1,0 +1,174 @@
+###########################################################
+# 标题
+###########################################################
+text=munich
+tips=munich
+
+###########################################################
+#图标
+###########################################################
+#######################################
+# 文件图标
+#######################################
+file-new=file-new.png
+file-open=file-open.png
+file-save=file-save.png
+file-saveas=3
+file-print=4
+file-close=file-close.png
+file-exit=sign-out.png
+
+#######################################
+# 编辑图标
+#######################################
+edit-undo=7
+edit-redo=8
+edit-delete-cur=file-delete.png
+edit-delete-all=10
+edit-move-up=edit-move-up.png
+edit-move-down=edit-move-down.png
+edit-move-left=edit-move-left.png
+edit-move-right=edit-move-right.png
+edit-history=edit-history.png
+
+#######################################
+# 导航图标
+#######################################
+guid-select-prev=16
+guid-select-next=17
+
+#######################################
+# 视图图标
+#######################################
+view-menubar=view-menu.png
+view-toolbar=19
+view-infobar=20
+view-findbar=21
+view-prop-isolate=edit-isolate.png
+view-prop-visable=23
+
+#######################################
+# 工具图标
+#######################################
+data-search=find.png
+
+#######################################
+# 工具图标
+#######################################
+tool-options=24
+
+#######################################
+# 帮助图标
+#######################################
+help-topic=help.png
+
+#######################################
+# 标记为
+#######################################
+keys-label0=label.png
+keys-label1=label1.png
+keys-label2=label2.png
+keys-label3=label3.png
+keys-label4=label4.png
+keys-label5=label5.png
+keys-label6=label6.png
+keys-label7=label7.png
+keys-label8=label8.png
+keys-label9=label9.png
+
+#######################################
+# 重要性
+#######################################
+keys-major-2=major-2.png
+keys-major-1=major-1.png
+keys-major0=major.png
+keys-major+1=major+1.png
+keys-major+2=major+2.png
+
+#######################################
+# 排序方式
+#######################################
+keys-sort-asc=41
+keys-sort-desc=42
+
+#######################################
+# 属性编辑图标
+#######################################
+prop-copy=prop-copy.png
+prop-save=prop-save.png
+prop-drop=prop-drop.png
+
+#######################################
+# 信息图标
+#######################################
+info-mail=46
+info-card=card.png
+
+#######################################
+# 提醒图标
+#######################################
+hint-time=hint.png
+
+#######################################
+#口令编辑图标
+#######################################
+pwds-mask=pwds-mask.png
+pwds-view=pwds-view.png
+pwds-generate=pwds-generate.png
+pwds-options=options.png
+
+#######################################
+# 链接图标
+#######################################
+link-open=link.png
+
+#######################################
+# 邮件图标
+#######################################
+mail-receive=mail-receive.png
+mail-send=mail-send.png
+mail-attachment=mail-attach.png
+mail-unread=56
+mail-readed=57
+
+#######################################
+# 日期图标
+#######################################
+date-time=date.png
+date-options=options.png
+
+#######################################
+# 附件图标
+#######################################
+file-preview=file-preview.png
+file-append=file-upload.png
+file-img-eraser=file-img-eraser.png
+file-img-cursor-def=file-img-cursor-def.png
+file-img-cursor-sel=file-img-cursor-sel.png
+file-img-shaped-def=file-img-shaped-def.png
+file-img-shaped-sel=file-img-shaped-sel.png
+
+#######################################
+# 数值图标
+#######################################
+data-options=options.png
+
+#######################################
+# 控制图标
+#######################################
+sign-options=options.png
+
+#######################################
+# 向导图标
+#######################################
+mwiz-view=mwiz-view.png
+mwiz-add=mwiz-add.png
+mwiz-edit=mwiz-edit.png
+mwiz-delete=mwiz-delete.png
+mwiz-hint=mwiz-hint.png
+mwiz-find=mwiz-find.png
+#######################################
+# 运算图标
+#######################################
+maoc-calc=maoc-calc.png
+maoc-help=maoc-help.png

@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicpwd>
+    <!--魔方密码菜单栏-->
+    <menubar id="mpro">
+        <menu id="file" text="$P30F7601" text-def="文件">
+            <item type="normal" text="$P30F7602" text-def="新增">
+                <action id="new-keys" class="com.magicpwd.e.mpro.file.AppendAction">
+                    <stroke key="^ N" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7603" text-def="保存">
+                <action id="save-keys" class="com.magicpwd.e.mpro.file.SaveAction">
+                    <stroke key="^ S" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7604" text-def="隐藏窗口">
+                <action id="hide-window" class="com.magicpwd.e.mpro.file.HideAction">
+                    <stroke key="^ H" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7643" text-def="锁定窗口">
+                <action id="lock-window" class="com.magicpwd.e.mpro.file.LockAction">
+                    <stroke key="^ L" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7605" text-def="退出">
+                <action id="exit-system" class="com.magicpwd.e.mpro.file.ExitAction">
+                    <stroke key="^ Q" />
+                </action>
+            </item>
+        </menu>
+        <menu id="edit" text="$P30F7606" text-def="编辑">
+            <item type="normal" text="$P30F7607" text-def="查找">
+                <action class="com.magicpwd.e.mpro.edit.FindAction">
+                    <stroke key="^ F" />
+                </action>
+            </item>
+            <seperator />
+            <item type="normal" text="$P30F7608" text-def="添加文本属性">
+                <action id="append-text" class="com.magicpwd.e.mpro.edit.AppendTextAction">
+                    <stroke key="^ 1" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7609" text-def="添加口令属性">
+                <action id="append-keys" class="com.magicpwd.e.mpro.edit.AppendKeysAction">
+                    <stroke key="^ 2" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F760A" text-def="添加链接属性">
+                <action id="append-link" class="com.magicpwd.e.mpro.edit.AppendLinkAction">
+                    <stroke key="^ 3" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F760B" text-def="添加邮件属性">
+                <action id="append-mail" class="com.magicpwd.e.mpro.edit.AppendMailAction">
+                    <stroke key="^ 4" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F760C" text-def="添加日期属性">
+                <action id="append-date" class="com.magicpwd.e.mpro.edit.AppendDateAction">
+                    <stroke key="^ 5" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F760D" text-def="添加附注属性">
+                <action id="append-area" class="com.magicpwd.e.mpro.edit.AppendAreaAction">
+                    <stroke key="^ 6" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F760E" text-def="添加文件属性">
+                <action id="append-file" class="com.magicpwd.e.mpro.edit.AppendFileAction">
+                    <stroke key="^ 7" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F764A" text-def="添加数值属性">
+                <action id="append-data" class="com.magicpwd.e.mpro.edit.AppendDataAction">
+                    <stroke key="^ 8" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F764B" text-def="添加列表属性">
+                <action id="append-list" class="com.magicpwd.e.mpro.edit.AppendListAction">
+                    <stroke key="^ 9" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F764C" text-def="添加标记属性">
+                <action id="append-sign" class="com.magicpwd.e.mpro.edit.AppendSignAction">
+                    <stroke key="^ 0" />
+                </action>
+            </item>
+            <seperator />
+            <item type="normal" text="$P30F760F" text-def="上移">
+                <action id="edit-prev" class="com.magicpwd.e.mpro.edit.MovetoPrevAction">
+                    <stroke key="^ ~ up" />
+                    <stroke key="^ U" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7610" text-def="下移">
+                <action id="edit-next" class="com.magicpwd.e.mpro.edit.MovetoNextAction">
+                    <stroke key="^ ~ down" />
+                    <stroke key="^ D" />
+                </action>
+            </item>
+        </menu>
+        <menu id="view" text="$P30F7614" text-def="视图">
+            <item type="checkbox" text="$P30F7615" text-def="总在最上">
+                <action class="com.magicpwd.e.mpro.view.TopsAction">
+                    <stroke key="F5" />
+                </action>
+            </item>
+            <seperator />
+            <item type="normal" text="$P30F7648" text-def="选择上一属性">
+                <action id="view-prev" class="com.magicpwd.e.mpro.view.SelectPrevAction">
+                    <stroke key="^ up" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7649" text-def="选择下一属性">
+                <action id="view-next" class="com.magicpwd.e.mpro.view.SelectNextAction">
+                    <stroke key="^ down" />
+                </action>
+            </item>
+            <seperator />
+            <item id="menu-edit-visible" type="checkbox" text="$P30F7616" text-def="显示属性栏" command="menu-edit-isolate,tool-edit-isolate">
+                <action class="com.magicpwd.e.mpro.view.EditVisibleAction">
+                    <stroke key="^ P" />
+                </action>
+            </item>
+            <item id="menu-edit-isolate" type="checkbox" text="$P30F7617" text-def="分离属性栏" command="tool-edit-isolate">
+                <action id="edit-isolate" class="com.magicpwd.e.mpro.view.EditIsolateAction">
+                    <stroke key="^ W" />
+                </action>
+            </item>
+            <item id="menu-find-visible" type="checkbox" text="$P30F7618" text-def="显示搜索栏">
+                <action class="com.magicpwd.e.mpro.view.FindVisibleAction">
+                    <stroke key="^ J" />
+                </action>
+            </item>
+            <item id="menu-menu-visible" type="checkbox" text="$P30F7619" text-def="显示菜单栏" command="tool-menu-visible">
+                <action id="menu-visible" class="com.magicpwd.e.mpro.view.MenuVisibleAction">
+                    <stroke key="^ M" />
+                </action>
+            </item>
+            <item id="menu-tool-visible" type="checkbox" text="$P30F761A" text-def="显示工具栏">
+                <action class="com.magicpwd.e.mpro.view.ToolVisibleAction">
+                    <stroke key="^ T" />
+                </action>
+            </item>
+            <item id="menu-info-visible" type="checkbox" text="$P30F761B" text-def="显示状态栏">
+                <action class="com.magicpwd.e.mpro.view.InfoVisibleAction">
+                    <stroke key="^ I" />
+                </action>
+            </item>
+            <seperator />
+            <item type="normal" text="$P30F7638" text-def="切换到《向导模式》">
+                <action class="com.magicpwd.e.tray.MwizAction">
+                    <stroke key="^ # G" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7639" text-def="切换到《记事模式》">
+                <action class="com.magicpwd.e.tray.MpadAction">
+                    <stroke key="^ # N" />
+                </action>
+            </item>
+        </menu>
+        <menu id="data" text="$P30F761C" text-def="数据">
+            <item type="normal" text="$P30F761D" text-def="导入数据">
+                <action id="import" class="com.magicpwd.e.mpro.data.ImportByKindAction" />
+            </item>
+            <item type="normal" text="$P30F761E" text-def="导出数据">
+                <action id="export" class="com.magicpwd.e.mpro.data.ExportByKindAction" />
+            </item>
+            <seperator />
+            <item type="normal" text="$P30F7645" text-def="备份到本地">
+                <action class="com.magicpwd.e.mpro.safe.NativeBackupAction">
+                    <stroke key="^ B" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7646" text-def="从本地恢复">
+                <action class="com.magicpwd.e.mpro.safe.NativeResumeAction">
+                    <stroke key="^ R" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7647" text-def="配置本地路径">
+                <action class="com.magicpwd.e.mpro.safe.NativeConfigAction" />
+            </item>
+            <seperator />
+            <item type="normal" text="$P30F7635" text-def="备份到云端">
+                <action class="com.magicpwd.e.mpro.safe.RemoteBackupAction">
+                    <stroke key="^ ~ B" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7636" text-def="从云端恢复">
+                <action class="com.magicpwd.e.mpro.safe.RemoteResumeAction">
+                    <stroke key="^ ~ R" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7637" text-def="配置云端帐户">
+                <action class="com.magicpwd.e.mpro.safe.RemoteConfigAction" />
+            </item>
+            <seperator />
+            <item type="normal" text="$P30F761F" text-def="常规设置">
+                <action class="com.magicpwd.e.mpro.user.OptionsAction" />
+            </item>
+            <item type="normal" text="$P30F7620" text-def="口令设置">
+                <action class="com.magicpwd.e.mpro.user.PasswordAction" />
+            </item>
+            <item type="normal" text="$P30F7621" text-def="模板管理">
+                <action class="com.magicpwd.e.mpro.user.TemplateAction" />
+            </item>
+        </menu>
+        <menu id="user" text="$P30F7624" text-def="用户">
+            <item type="normal" text="$P30F7625" text-def="切换用户" enabled="false">
+                <action class="com.magicpwd.e.mpro.user.SwitchUserAction" />
+            </item>
+            <item type="normal" text="$P30F7626" text-def="添加用户" enabled="false">
+                <action class="com.magicpwd.e.mpro.user.CreateUserAction" />
+            </item>
+            <seperator />
+            <item type="normal" text="$P30F7627" text-def="更改登录口令">
+                <action class="com.magicpwd.e.mpro.user.ChangePkeyAction" />
+            </item>
+            <item id="mpro-skey" type="normal" text="$P30F7628" text-def="设置安全口令">
+                <action class="com.magicpwd.e.mpro.user.CreateSkeyAction" />
+            </item>
+        </menu>
+        <menu id="skin" text="$P30F7631" text-def="皮肤">
+        </menu>
+        <menu id="help" text="$P30F7629" text-def="帮助">
+            <item type="normal" text="$P30F762A" text-def="帮助">
+                <action class="com.magicpwd.e.tray.HelpAction">
+                    <stroke key="F1" />
+                </action>
+            </item>
+            <seperator />
+            <item type="normal" text="$P30F762B" text-def="首页">
+                <action class="com.magicpwd.e.tray.SiteAction">
+                    <stroke key="F2" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F762C" text-def="博客">
+                <action class="com.magicpwd.e.tray.BlogAction" />
+            </item>
+            <item type="normal" text="$P30F762D" text-def="微博">
+                <action class="com.magicpwd.e.tray.MlogAction" />
+            </item>
+            <item type="normal" text="$P30F762E" text-def="联系作者">
+                <action class="com.magicpwd.e.tray.MailAction">
+                    <stroke key="F3" />
+                </action>
+            </item>
+            <seperator />
+            <item type="normal" text="$P30F762F" text-def="检测更新">
+                <action class="com.magicpwd.e.tray.UpdtAction">
+                    <stroke key="F4" />
+                </action>
+            </item>
+            <seperator />
+            <item type="normal" text="$P30F7623" text-def="键盘快捷">
+                <action class="com.magicpwd.e.mpro.help.KeysAction">
+                    <stroke key="F6" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7634" text-def="Java环境">
+                <action class="com.magicpwd.e.mpro.help.JavaAction">
+                    <stroke key="F7" />
+                </action>
+            </item>
+            <item type="normal" text="$P30F7644" text-def="特别致谢">
+                <action class="com.magicpwd.e.mpro.help.IdioAction">
+                    <stroke key="F8" />
+                </action>
+            </item>
+            <seperator />
+            <item type="normal" text="$P30F7630" text-def="关于">
+                <action class="com.magicpwd.e.mpro.help.InfoAction" />
+            </item>
+        </menu>
+        <menu id="plug" text="$P30F763A" text-def="扩展">
+            <item type="normal" text="测试(@T)" command="这是一个扩展测试！">
+                <action class="example.TestAction" />
+            </item>
+        </menu>
+    </menubar>
+
+    <!--魔方密码工具栏-->
+    <toolbar id="mpro">
+        <item type="normal" tips="$P30F7B01" tips-def="新增">
+            <icon>
+                <default id="file-new" path="var:file-new"/>
+            </icon>
+            <action id="new-keys" class="com.magicpwd.e.mpro.file.AppendAction" />
+        </item>
+        <item type="normal" tips="$P30F7B02" tips-def="保存">
+            <icon>
+                <default id="file-save" path="var:file-save"/>
+            </icon>
+            <action id="save-keys" class="com.magicpwd.e.mpro.file.SaveAction" />
+        </item>
+        <seperator />
+        <item type="normal" tips="$P30F7B03" tips-def="上移">
+            <icon>
+                <default id="file-save" path="var:edit-move-up"/>
+            </icon>
+            <action id="edit-prev" class="com.magicpwd.e.mpro.edit.PrevAction" />
+        </item>
+        <item type="normal" tips="$P30F7B04" tips-def="下移">
+            <icon>
+                <default id="file-save" path="var:edit-move-down"/>
+            </icon>
+            <action id="edit-next" class="com.magicpwd.e.mpro.edit.NextAction" />
+        </item>
+        <seperator />
+        <item id="tool-edit-history" type="toggle" tips="$P30F7B05" tips-def="历史记录">
+            <icon>
+                <default id="edit-history" path="var:edit-history"/>
+            </icon>
+            <action id="edit-history" class="com.magicpwd.e.mpro.safe.RecordConfigAction" />
+        </item>
+        <item id="tool-edit-isolate" type="toggle" tips="$P30F7B06" tips-def="属性编辑" command="menu-edit-isolate">
+            <icon>
+                <default id="edit-isolate" path="var:view-prop-isolate"/>
+            </icon>
+            <action id="edit-isolate" class="com.magicpwd.e.mpro.view.EditIsolateAction" />
+        </item>
+        <item id="tool-menu-visible" type="toggle" tips="$P30F7B0B" tips-def="显示菜单" command="menu-menu-visible">
+            <icon>
+                <default id="menu-visible" path="var:view-menubar"/>
+            </icon>
+            <action id="menu-visible" class="com.magicpwd.e.mpro.view.MenuVisibleAction" />
+        </item>
+        <seperator />
+        <item type="normal" tips="$P30F7B07" tips-def="退出">
+            <icon>
+                <default id="file-help" path="var:file-exit"/>
+            </icon>
+            <action id="exit-system" class="com.magicpwd.e.mpro.file.ExitAction" />
+        </item>
+        <seperator />
+        <item type="normal" tips="$P30F7B07" tips-def="帮助">
+            <icon>
+                <default id="file-help" path="var:help-topic"/>
+            </icon>
+            <action class="com.magicpwd.e.tray.HelpAction" />
+        </item>
+    </toolbar>
+    <!--魔方密码弹出菜单-->
+    <popmenu id="kind">
+        <item type="normal" text="$P30F7D01" text-def="添加类别">
+            <action class="com.magicpwd.e.mpro.kind.AppendAction" />
+        </item>
+        <item type="normal" text="$P30F7D02" text-def="更新类别">
+            <action class="com.magicpwd.e.mpro.kind.UpdateAction" />
+        </item>
+        <item type="normal" text="$P30F7D03" text-def="删除类别">
+            <action class="com.magicpwd.e.mpro.kind.DeleteAction" />
+        </item>
+        <seperator />
+        <item type="normal" text="$P30F7D3A" text-def="上移一行">
+            <action class="com.magicpwd.e.mpro.kind.ForwardAction" />
+        </item>
+        <item type="normal" text="$P30F7D3B" text-def="下移一行">
+            <action class="com.magicpwd.e.mpro.kind.BackwardAction" />
+        </item>
+        <item type="normal" text="$P30F7D3C" text-def="提升一级">
+            <action class="com.magicpwd.e.mpro.kind.PromotionAction" />
+        </item>
+        <item type="normal" text="$P30F7D3D" text-def="缩进一级">
+            <action class="com.magicpwd.e.mpro.kind.DemotionAction" />
+        </item>
+        <seperator />
+        <item type="normal" text="$P30F7D04" text-def="导入数据">
+            <action id="import" class="com.magicpwd.e.mpro.data.ImportAction" />
+        </item>
+    </popmenu>
+    <popmenu id="list">
+        <item type="normal" text="$P30F7D05" text-def="添加记录">
+            <action id="new-keys" class="com.magicpwd.e.mpro.file.AppendAction" />
+        </item>
+        <item type="normal" text="$P30F7D06" text-def="删除记录">
+            <action id="drop-keys" class="com.magicpwd.e.mpro.file.DeleteAction" />
+        </item>
+        <seperator />
+        <menu text="$P30F7D1B" text-def="标记为：">
+            <item type="checkbox" text="$P30F7D1C" text-def="默认(@0)" group="label" command="0">
+                <icon>
+                    <default cache-id="label0" path="var:keys-label0"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mpro.list.ChangeLabelAction" />
+            </item>
+            <seperator />
+            <item type="checkbox" text="$P30F7D1D" text-def="常使用(@1)" group="label" command="1">
+                <icon>
+                    <default cache-id="label1" path="var:keys-label1"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mpro.list.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D1E" text-def="待注册(@2)" group="label" command="2">
+                <icon>
+                    <default cache-id="label2" path="var:keys-label2"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mpro.list.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D1F" text-def="待认证(@3)" group="label" command="3">
+                <icon>
+                    <default cache-id="label3" path="var:keys-label3"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mpro.list.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D20" text-def="待激活(@4)" group="label" command="4">
+                <icon>
+                    <default cache-id="label4" path="var:keys-label4"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mpro.list.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D21" text-def="仅测试(@5)" group="label" command="5">
+                <icon>
+                    <default cache-id="label5" path="var:keys-label5"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mpro.list.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D22" text-def="已过期(@6)" group="label" command="6">
+                <icon>
+                    <default cache-id="label6" path="var:keys-label6"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mpro.list.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D23" text-def="已丢失(@7)" group="label" command="7">
+                <icon>
+                    <default cache-id="label7" path="var:keys-label7"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mpro.list.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D24" text-def="被禁用(@8)" group="label" command="8">
+                <icon>
+                    <default cache-id="label8" path="var:keys-label8"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mpro.list.ChangeLabelAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D25" text-def="已删除(@9)" group="label" command="9">
+                <icon>
+                    <default cache-id="label9" path="var:keys-label9"/>
+                </icon>
+                <action id="change-mode" class="com.magicpwd.e.mpro.list.ChangeLabelAction" />
+            </item>
+        </menu>
+        <menu text="$P30F7D26" text-def="重要性：">
+            <item type="checkbox" text="$P30F7D27" text-def="最高" group="major" command="2">
+                <icon>
+                    <default cache-id="major2" path="var:keys-major+2"/>
+                </icon>
+                <action id="change-note" class="com.magicpwd.e.mpro.list.ChangeMajorAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D28" text-def="高" group="major" command="1">
+                <icon>
+                    <default cache-id="major1" path="var:keys-major+1"/>
+                </icon>
+                <action id="change-note" class="com.magicpwd.e.mpro.list.ChangeMajorAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D29" text-def="正常" group="major" command="0">
+                <icon>
+                    <default cache-id="major0" path="var:keys-major0"/>
+                </icon>
+                <action id="change-note" class="com.magicpwd.e.mpro.list.ChangeMajorAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D2A" text-def="低" group="major" command="-1">
+                <icon>
+                    <default cache-id="major-1" path="var:keys-major-1"/>
+                </icon>
+                <action id="change-note" class="com.magicpwd.e.mpro.list.ChangeMajorAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D2B" text-def="最低" group="major" command="-2">
+                <icon>
+                    <default cache-id="major-2" path="var:keys-major-2"/>
+                </icon>
+                <action id="change-note" class="com.magicpwd.e.mpro.list.ChangeMajorAction" />
+            </item>
+        </menu>
+        <menu text="$P30F7D2C" text-def="排序方式">
+            <item type="checkbox" text="$P30F7D2D" text-def="升序" group="order-dir" command="true">
+                <action id="sort-dir" class="com.magicpwd.e.mpro.list.SortDirAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D2E" text-def="降序" group="order-dir" command="false">
+                <action id="sort-dir" class="com.magicpwd.e.mpro.list.SortDirAction" />
+            </item>
+        </menu>
+        <menu text="$P30F7D2F" text-def="排序依据">
+            <item type="checkbox" text="$P30F7D30" text-def="使用频率" group="order-key" command="01">
+                <action id="sort-key" class="com.magicpwd.e.mpro.list.SortKeyAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D31" text-def="口令名称" group="order-key" command="09">
+                <action id="sort-key" class="com.magicpwd.e.mpro.list.SortKeyAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D32" text-def="注册时间" group="order-key" command="07">
+                <action id="sort-key" class="com.magicpwd.e.mpro.list.SortKeyAction" />
+            </item>
+            <item type="checkbox" text="$P30F7D33" text-def="到期时间" group="order-key" command="0D">
+                <action id="sort-key" class="com.magicpwd.e.mpro.list.SortKeyAction" />
+            </item>
+        </menu>
+        <seperator />
+        <item type="normal" text="$P30F7D1A" text-def="把数据迁移到...(@M)">
+            <action class="com.magicpwd.e.mpro.list.MovetoAction" />
+        </item>
+        <seperator />
+        <item type="normal" text="$P30F7D07" text-def="查看历史">
+            <action class="com.magicpwd.e.mpro.list.HistoryAction" />
+        </item>
+    </popmenu>
+    <popmenu id="grid">
+        <item type="normal" text="$P30F7D08" text-def="复制数据">
+            <action class="com.magicpwd.e.mpro.grid.CopyAction" />
+        </item>
+        <seperator />
+        <menu text="$P30F7D09" text-def="添加字段">
+            <item type="normal" text="$P30F7D0A" text-def="添加文本">
+                <action id="append-text" class="com.magicpwd.e.mpro.edit.AppendTextAction" />
+            </item>
+            <item type="normal" text="$P30F7D0B" text-def="添加口令">
+                <action id="append-keys" class="com.magicpwd.e.mpro.edit.AppendKeysAction" />
+            </item>
+            <item type="normal" text="$P30F7D0C" text-def="添加链接">
+                <action id="append-link" class="com.magicpwd.e.mpro.edit.AppendLinkAction" />
+            </item>
+            <item type="normal" text="$P30F7D0D" text-def="添加邮件">
+                <action id="append-mail" class="com.magicpwd.e.mpro.edit.AppendMailAction" />
+            </item>
+            <item type="normal" text="$P30F7D0E" text-def="添加日期">
+                <action id="append-date" class="com.magicpwd.e.mpro.edit.AppendDateAction" />
+            </item>
+            <item type="normal" text="$P30F7D0F" text-def="添加附注">
+                <action id="append-area" class="com.magicpwd.e.mpro.edit.AppendAreaAction" />
+            </item>
+            <item type="normal" text="$P30F7D10" text-def="添加附件">
+                <action id="append-file" class="com.magicpwd.e.mpro.edit.AppendFileAction" />
+            </item>
+            <item type="normal" text="$P30F7D34" text-def="添加数值">
+                <action id="append-data" class="com.magicpwd.e.mpro.edit.AppendDataAction" />
+            </item>
+            <item type="normal" text="$P30F7D36" text-def="添加列表">
+                <action id="append-list" class="com.magicpwd.e.mpro.edit.AppendListAction" />
+            </item>
+            <item type="normal" text="$P30F7D38" text-def="添加标记">
+                <action id="append-sign" class="com.magicpwd.e.mpro.edit.AppendSignAction" />
+            </item>
+        </menu>
+        <menu text="$P30F7D11" text-def="转换类型">
+            <item type="normal" text="$P30F7D12" text-def="转换为文本">
+                <action id="change-text" class="com.magicpwd.e.mpro.edit.ChangeTextAction" />
+            </item>
+            <item type="normal" text="$P30F7D13" text-def="转换为口令">
+                <action id="change-keys" class="com.magicpwd.e.mpro.edit.ChangeKeysAction" />
+            </item>
+            <item type="normal" text="$P30F7D14" text-def="转换为链接">
+                <action id="change-link" class="com.magicpwd.e.mpro.edit.ChangeLinkAction" />
+            </item>
+            <item type="normal" text="$P30F7D15" text-def="转换为邮件">
+                <action id="change-mail" class="com.magicpwd.e.mpro.edit.ChangeMailAction" />
+            </item>
+            <item type="normal" text="$P30F7D16" text-def="转换为日期">
+                <action id="change-date" class="com.magicpwd.e.mpro.edit.ChangeDateAction" />
+            </item>
+            <item type="normal" text="$P30F7D17" text-def="转换为附注">
+                <action id="change-area" class="com.magicpwd.e.mpro.edit.ChangeAreaAction" />
+            </item>
+            <item type="normal" text="$P30F7D18" text-def="转换为附件">
+                <action id="change-file" class="com.magicpwd.e.mpro.edit.ChangeFileAction" />
+            </item>
+            <item type="normal" text="$P30F7D35" text-def="转换为数值">
+                <action id="change-data" class="com.magicpwd.e.mpro.edit.ChangeDataAction" />
+            </item>
+            <item type="normal" text="$P30F7D37" text-def="转换为列表">
+                <action id="change-list" class="com.magicpwd.e.mpro.edit.ChangeListAction" />
+            </item>
+            <item type="normal" text="$P30F7D39" text-def="转换为标记">
+                <action id="change-sign" class="com.magicpwd.e.mpro.edit.ChangeSignAction" />
+            </item>
+        </menu>
+        <seperator />
+        <item type="normal" text="$P30F760F" text-def="上移">
+            <action id="edit-prev" class="com.magicpwd.e.mpro.edit.PrevAction" />
+        </item>
+        <item type="normal" text="$P30F7610" text-def="下移">
+            <action id="edit-next" class="com.magicpwd.e.mpro.edit.NextAction" />
+        </item>
+        <seperator />
+        <item type="normal" text="$P30F7D19" text-def="删除属性">
+            <action class="com.magicpwd.e.mpro.grid.DropAction" />
+        </item>
+    </popmenu>
+    <!--日期弹出菜单选项-->
+    <submenu id="date-template">
+        <!--日期及时间-->
+        <menu text="日期时间型">
+            <item type="checkbox" text="完整格式" group="date-template" command="java:0d0t" />
+            <item type="checkbox" text="长格式" group="date-template" command="java:1d1t" />
+            <item type="checkbox" text="标准格式" group="date-template" command="java:2d2t" />
+            <item type="checkbox" text="短格式" group="date-template" command="java:3d3t" />
+            <seperator />
+            <item type="checkbox" text="yyyyMMdd HHmmss 格式" group="date-template" command="user:yyyyMMdd HHmmss" />
+            <item type="checkbox" text="yyyy-MM-dd HH:mm:ss 格式" group="date-template" command="user:yyyy-MM-dd HH:mm:ss" />
+            <item type="checkbox" text="yyyy.MM.dd HH.mm.ss 格式" group="date-template" command="user:yyyy.MM.dd HH.mm.ss" />
+            <item type="checkbox" text="yyyy年MM月dd日 HH时mm分ss秒 格式" group="date-template" command="user:yyyy年MM月dd日 HH时mm分ss秒" />
+        </menu>
+        <!--日期-->
+        <menu text="日期型">
+            <!--系统定义-->
+            <item type="checkbox" text="完整格式" group="date-template" command="java:0d" />
+            <item type="checkbox" text="长格式" group="date-template" command="java:1d" />
+            <item type="checkbox" text="标准格式" group="date-template" command="java:2d" />
+            <item type="checkbox" text="短格式" group="date-template" command="java:3d" />
+            <seperator />
+            <!--用户定义-->
+            <item type="checkbox" text="yyyyMMdd 格式" group="date-template" command="user:yyyyMMdd" />
+            <item type="checkbox" text="yyyy-MM-dd 格式" group="date-template" command="user:yyyy-MM-dd" />
+            <item type="checkbox" text="yyyy/MM/dd 格式" group="date-template" command="user:yyyy/MM/dd" />
+            <item type="checkbox" text="yyyy.MM.dd 格式" group="date-template" command="user:yyyy.MM.dd" />
+            <item type="checkbox" text="yyyy MM dd 格式" group="date-template" command="user:yyyy MM dd" />
+            <item type="checkbox" text="yyyy年MM月dd日 格式" group="date-template" command="user:yyyy年MM月dd日" />
+        </menu>
+        <!--时间-->
+        <menu text="时间型">
+            <item type="checkbox" text="完整格式" group="date-template" command="java:0t" />
+            <item type="checkbox" text="长格式" group="date-template" command="java:1t" />
+            <item type="checkbox" text="标准格式" group="date-template" command="java:2t" />
+            <item type="checkbox" text="短格式" group="date-template" command="java:3t" />
+            <seperator />
+            <item type="checkbox" text="HHmmss 格式" group="date-template" command="user:HHmmss" />
+            <item type="checkbox" text="HH:mm:ss 格式" group="date-template" command="user:HH:mm:ss" />
+            <item type="checkbox" text="HH.mm.ss 格式" group="date-template" command="user:HH.mm.ss" />
+            <item type="checkbox" text="HH mm ss 格式" group="date-template" command="user:HH mm ss" />
+            <item type="checkbox" text="HH时mm分ss秒 格式" group="date-template" command="user:HH时mm分ss秒" />
+        </menu>
+    </submenu>
+    <submenu id="date-interval">
+        <menu id="hint-fixtime" text="定时提醒">
+            <!--
+            <item type="normal" text="2010-12-31 20:00:00" command="fix:2010-12-31 20:00:00" />
+            <seperator />
+            -->
+            <menu text="秒">
+                <item type="normal" text="30秒后" command="var:+30second" />
+            </menu>
+            <menu text="分">
+                <item type="normal" text="30分后" command="var:+30minute" />
+            </menu>
+            <menu text="时">
+                <item type="normal" text="1小时后" command="var:+1hour" />
+                <item type="normal" text="2小时后" command="var:+2hour" />
+            </menu>
+            <menu text="天">
+                <item type="normal" text="1天后" command="var:+1day" />
+                <item type="normal" text="2天后" command="var:+2day" />
+            </menu>
+            <menu text="周">
+                <item type="normal" text="1周后" command="var:+1week" />
+                <item type="normal" text="2周后" command="var:+2week" />
+            </menu>
+            <menu text="月">
+                <item type="normal" text="1月后" command="var:+1month" />
+                <item type="normal" text="2月后" command="var:+2month" />
+            </menu>
+            <menu text="年">
+                <item type="normal" text="1年后" command="var:+1year" />
+                <item type="normal" text="2年后" command="var:+2year" />
+            </menu>
+        </menu>
+        <menu id="hint-cycle" text="周期提醒">
+        </menu>
+        <menu id="hint-interval" text="间隔提醒">
+        </menu>
+        <menu id="hint-special" text="特殊提醒">
+        </menu>
+        <menu id="hint-function" text="其它提醒">
+        </menu>
+    </submenu>
+    <!--数值弹出菜单选项-->
+    <submenu id="data-options">
+        <item type="checkbox" text="$P30F7C09" text-def="整数" group="data-template" command="dec:0" />
+        <menu text="$P30F7C0A" text-def="小数">
+            <item type="checkbox" text="1位" group="data-template" command="dec:1" />
+            <item type="checkbox" text="2位" group="data-template" command="dec:2" />
+            <item type="checkbox" text="3位" group="data-template" command="dec:3" />
+            <item type="checkbox" text="4位" group="data-template" command="dec:4" />
+            <item type="checkbox" text="5位" group="data-template" command="dec:5" />
+            <item type="checkbox" text="6位" group="data-template" command="dec:6" />
+            <item type="checkbox" text="7位" group="data-template" command="dec:7" />
+            <item type="checkbox" text="8位" group="data-template" command="dec:8" />
+            <seperator />
+            <item type="checkbox" id="data-precision" text="$P30F7C0B" text-def="其它……" group="data-template" command="dec:-1" />
+            <seperator />
+            <item type="checkbox" id="data-fixed-dec" text="$P30F7C17" text-def="固定小数长度" command="dec:f" />
+            <!--
+            <item type="checkbox" id="data-fixed-int" text="$P30F7C18" command="int:f" />
+            -->
+        </menu>
+        <seperator />
+        <menu text="$P30F7C0C" id="data-collection" text-def="集合">
+            <item type="checkbox" id="data-pos" text="$P30F7C0D" text-def="正数" command="set:+" />
+            <item type="checkbox" id="data-0" text="$P30F7C0E" text-def="0" command="set:0" />
+            <item type="checkbox" id="data-nav" text="$P30F7C0F" text-def="负数" command="set:-" />
+        </menu>
+        <menu text="$P30F7C10" id="data-characters" text-def="符号">
+            <item type="checkbox" id="data-notation" text="$P30F7C11" text-def="启用特殊符号" command="notation"/>
+            <seperator />
+            <item type="normal" id="data-character" tips="$P30F7C13" tips-def="更改特殊符号" command="character"/>
+            <item type="checkbox" id="data-thehead" text="$P30F7C14" text-def="符号前置" group="data-position" command="pos:^" />
+            <item type="checkbox" id="data-thefoot" text="$P30F7C15" text-def="符号后置" group="data-position" command="pos:$" />
+            <item type="checkbox" id="data-optional" text="$P30F7C16" text-def="可选输入" command="optional"/>
+        </menu>
+    </submenu>
+    <submenu id="sign-options">
+        <item type="checkbox" id="sign-sep" text="$P30F7E03" text-def="分页控制(@S)" group="sign-options" command="sep:P30F7E04" />
+        <item type="checkbox" id="sign-div" text="$P30F7E05" text-def="标题面板(@P)" group="sign-options" command="div:P30F7E06" />
+        <item type="checkbox" id="sign-tab" text="$P30F7E07" text-def="选项面板(@T)" group="sign-options" command="tab:P30F7E08" />
+        <menu text="$P30F7E09" text-def="其它标记(@O)">
+            <item type="checkbox" text="$P30F7E0A" text-def="-----" group="sign-options" command="tip:P30F7E0B" />
+            <item type="checkbox" text="$P30F7E0C" text-def="--{0}--" group="sign-options" command="tip:P30F7E0D" />
+        </menu>
+    </submenu>
+    <!--文件查看菜单-->
+    <submenu id="file-preview">
+        <item type="normal" text="图像查看器" text-def="图像查看器" init="com.magicpwd.x.docs.ImgViewer:PNG,JPG,JPEG,JFIF,GIF,BMP" />
+        <item type="normal" text="源码查看器" text-def="源码查看器" init="com.magicpwd.x.docs.SrcViewer:JAVA,CS,JS,CSS" />
+        <item type="normal" text="文本查看器" text-def="文本查看器" init="com.magicpwd.x.docs.TxtViewer:TXT,RTF,TEXT,HTML,HTM,XML" />
+    </submenu>
+    <strokes id="mpro">
+        <action id="exit-window" class="com.magicpwd.e.mpro.file.ExitAction">
+            <stroke key="^ Q" />
+        </action>
+        <action id="hide-window" class="com.magicpwd.e.mpro.file.HideAction">
+            <stroke key="^ Enter" />
+        </action>
+    </strokes>
+</magicpwd>

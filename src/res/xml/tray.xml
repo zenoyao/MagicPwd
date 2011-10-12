@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicpwd>
+    <!--魔方密码菜单栏-->
+    <popmenu id="tray">
+        <item type="normal" text="$P30F9601" text-def="关于">
+            <action class="com.magicpwd.e.tray.InfoAction" />
+        </item>
+        <item type="normal" text="$P30F9602" text-def="帮助">
+            <action class="com.magicpwd.e.tray.HelpAction" />
+        </item>
+        <seperator />
+        <item id="viewPtn" type="normal" text="$P30F960D" text-def="显示为托盘图标">
+            <action class="com.magicpwd.e.tray.ViewAction" />
+        </item>
+        <seperator />
+        <item type="normal" text="$P30F9603" text-def="高级模式(@1)">
+            <action class="com.magicpwd.e.tray.MproAction" />
+        </item>
+        <item type="normal" text="$P30F9604" text-def="向导模式(@2)">
+            <action class="com.magicpwd.e.tray.MwizAction" />
+        </item>
+        <item type="normal" text="$P30F9605" text-def="记事模式(@3)">
+            <action class="com.magicpwd.e.tray.MpadAction" />
+        </item>
+        <item type="normal" text="$P30F960F" text-def="定时任务(@4)">
+            <action class="com.magicpwd.e.tray.MgtdAction" />
+        </item>
+        <item type="normal" text="$P30F9610" text-def="数值运算(@5)">
+            <action class="com.magicpwd.e.tray.MaocAction" />
+        </item>
+        <item type="normal" text="$P30F9611" text-def="单位换算(@6)">
+            <action class="com.magicpwd.e.tray.MrucAction" />
+        </item>
+        <seperator />
+        <item type="normal" text="$P30F9606" text-def="检测更新">
+            <action class="com.magicpwd.e.tray.UpdtAction" />
+        </item>
+        <item type="normal" text="$P30F9607" text-def="联系作者">
+            <action class="com.magicpwd.e.tray.MailAction" />
+        </item>
+        <item type="normal" text="$P30F9608" text-def="网站">
+            <action class="com.magicpwd.e.tray.SiteAction" />
+        </item>
+        <item type="normal" text="$P30F762C" text-def="博客">
+            <action class="com.magicpwd.e.tray.BlogAction" />
+        </item>
+        <item type="normal" text="$P30F960B" text-def="微博">
+            <action class="com.magicpwd.e.tray.MlogAction" />
+        </item>
+        <seperator />
+        <menu id="plug" text="$P30F763A" text-def="扩展">
+            <item type="normal" text="测试(@T)" text-def="测试" command="这是一个扩展测试！">
+                <action class="example.TestAction" />
+            </item>
+        </menu>
+        <seperator />
+        <item type="normal" text="$P30F960C" text-def="退出">
+            <action class="com.magicpwd.e.tray.ExitAction" />
+        </item>
+    </popmenu>
+</magicpwd>

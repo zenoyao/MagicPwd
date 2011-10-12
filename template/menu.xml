@@ -1,0 +1,104 @@
+<!--
+    Document   : menu.xml
+    Created on : 2010年8月1日, 下午8:21
+    Author     : Amon
+    Description: 《魔方密码》软件菜单配置文档格式模板。
+                 部分快捷键替换字符说明：
+                 ~ shift
+                 # alt
+                 ^ ctrl或者control
+                 ! meta
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<magicpwd>
+    <!--菜单栏配置模板-->
+    <menubar id="menubar1">
+        <menu id="foo" text="菜单1" text-def="" tips="" tips-def="" enabled="true" visible="true">
+            <icon id="">
+                <default cache-id="" path="" />
+                <pressed cache-id="" path="" />
+                <rollover cache-id="" path="" />
+                <disabled cache-id="" path="" />
+            </icon>
+            <item type="normal" text="普通菜单项" text-def="" tips="" tips-def="" init="" command="哈哈！！" enabled="true" visible="true">
+                <icon id="">
+                    <default cache-id="" path="" />
+                    <pressed cache-id="" path="" />
+                    <rollover cache-id="" path="" />
+                    <disabled cache-id="" path="" />
+                </icon>
+                <action id="testAction1" class="" init="">
+                    <stroke key="^ N"/>
+                    <stroke key="ctrl M"/>
+                </action>
+            </item>
+            <seperator />
+            <item type="checkbox" text="复选菜单项" text-def="" tips="" tips-def="" init="" command="" enabled="true" visible="true" group="" checked="true">
+                <action id="testAction2" class="" init="">
+                    <stroke key="^ A" />
+                    <property name="ortherAction" ref-id="testAction1" />
+                </action>
+            </item>
+            <item type="radiobox" text="单选菜单项" text-def="" tips="" tips-def="" init="" command="testAction1" enabled="true" visible="true" group="" checked="true">
+                <action id="testAction3" class="" init="">
+                    <stroke key="! W" />
+                </action>
+            </item>
+        </menu>
+        <menu id="bar" text="菜单2" tips="" enabled="true" visible="true">
+            <item type="normal" text="普通菜单项" text-def="" tips="" tips-def="" init="" command="哈哈！！" enabled="true" visible="true">
+                <action id="" class="" init="">
+                    <stroke key="^ # T"/>
+                    <property name="ortherAction" ref-id="testAction2" />
+                </action>
+            </item>
+        </menu>
+    </menubar>
+    <!--工具栏配置模板-->
+    <toolbar id="toolbar1">
+        <item type="normal" text="" tips="普通菜单项" text-def="" init="" command="哈哈！！" tips-def="" icon="http://amon.me/logo/logo10.png" icon-rollover="" icon-pressed="" icon-disabled="" enabled="true" visible="true">
+            <action id="" class="" init="">
+                <stroke key="^ N" />
+            </action>
+        </item>
+        <item type="toggle" text="" text-def="" tips="普通菜单项" tips-def="" init="" icon="logo/logo.png" icon-rollover="" icon-pressed="" icon-disabled="" enabled="true" visible="true">
+            <action id="" class="" init="" />
+        </item>
+    </toolbar>
+    <!--弹出菜单配置模板-->
+    <popmenu id="popmenu1">
+        <item type="normal" text="普通菜单项" text-def="" tips="" tips-def="" init="" command="哈哈！！" enabled="true" visible="true">
+            <action id="" class="" init="">
+                <property name="" ref-id="" />
+            </action>
+        </item>
+        <menu id="foo" text="菜单1" text-def="" tips="" tips-def="" enabled="true" visible="true">
+            <item type="normal" text="普通菜单项" tips="" init="" command="哈哈！！" enabled="true" visible="true">
+                <action id="" class="" init="">
+                    <property name="" ref-id="" />
+                    <property name="" ref-id="" />
+                </action>
+            </item>
+            <seperator />
+            <item type="checkbox" text="复选菜单项" text-def="" tips="" tips-def="" init="" command="" enabled="true" visible="true" group="" checked="true">
+                <action id="" class="" init="">
+                    <property name="" ref-id="" />
+                </action>
+            </item>
+            <item type="radiobox" text="单选菜单项" text-def="" tips="" tips-def="" init="" command="" enabled="true" visible="true" group="" checked="true">
+                <action id="" class="" init="">
+                    <property name="" ref-id="" />
+                </action>
+            </item>
+        </menu>
+    </popmenu>
+    <submenu id="submenu1">
+        <item type="normal" text="普通菜单项" text-def="" tips="" tips-def="" init="" command="哈哈！！" enabled="true" visible="true" />
+        <menu id="foo" text="菜单1" text-def="" tips="" tips-def="" enabled="true" visible="true">
+            <item type="normal" text="普通菜单项" text-def="" tips="" tips-def="" init="" command="哈哈！！" enabled="true" visible="true" />
+            <seperator />
+            <item type="checkbox" text="复选菜单项" text-def="" tips="" tips-def="" init="" command="" enabled="true" visible="true" group="" checked="true" />
+            <item type="radiobox" text="单选菜单项" text-def="" tips="" tips-def="" init="" command="" enabled="true" visible="true" group="" checked="true" />
+        </menu>
+    </submenu>
+</magicpwd>

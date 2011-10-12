@@ -1,0 +1,48 @@
+# 窗口大小
+wnd.max.width=64
+wnd.max.height=64
+wnd.min.width=64
+wnd.min.height=64
+
+# 导航窗口背景信息
+bg.image=guid.png
+bg.offset.x=8
+bg.offset.y=8
+
+# 默认图标大小
+img.default.width=16
+img.default.height=16
+
+# 鼠标经过时背景信息
+img.selected.width=24
+img.selected.height=24
+img.selected.padding=2
+
+# 单元格鼠标经过背景
+cell[0,0].clip=guid-otl.png
+cell[0,1].clip=guid-oml.png
+cell[0,2].clip=guid-obl.png
+
+cell[1,0].clip=guid-otm.png
+cell[1,1].clip=guid-omm.png
+cell[1,2].clip=guid-obm.png
+
+cell[2,0].clip=guid-otr.png
+cell[2,1].clip=guid-omr.png
+cell[2,2].clip=guid-obr.png
+
+# 单元格功能及图片
+cell[0,0].view=mwiz
+cell[0,0].icon=mwiz.png
+
+cell[0,2].view=mgtd
+cell[0,2].icon=mgtd.png
+
+cell[1,1].view=mpro
+cell[1,1].icon=mpro.png
+
+cell[2,0].view=mpad
+cell[2,0].icon=mpad.png
+
+cell[2,2].view=maoc
+cell[2,2].icon=maoc.png

@@ -1,0 +1,5 @@
+<magicpwd>
+    <look group="Mac">
+        <item id="Mac" text="Mac" tips="Mac" type="java" class="com.sun.java.swing.plaf.mac.MacLookAndFeel" decorated="false" platform="mac" />
+    </look>
+</magicpwd>

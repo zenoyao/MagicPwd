@@ -1,0 +1,15 @@
+<magicpwd>
+    <look group="JTattoo">
+        <item id="Acryl" text="Acryl" tips="布质感+swing纯风格" type="user" class="com.jtattoo.plaf.acryl.AcrylLookAndFeel" decorated="true" />
+        <item id="Aero" text="Aero" tips="xp清新风格" type="user" class="com.jtattoo.plaf.aero.AeroLookAndFeel" decorated="true" />
+        <item id="Aluminium" text="Aluminium" tips="椭圆按钮+翠绿色按钮背景+金属质感" type="user" class="com.jtattoo.plaf.aluminium.AluminiumLookAndFeel" decorated="true" />
+        <item id="Bernstein" text="Bernstein" tips="黄色风格" type="user" class="com.jtattoo.plaf.bernstein.BernsteinLookAndFeel" decorated="true" />
+        <item id="Fast" text="Fast" tips="普通swing风格+蓝色边框" type="user" class="com.jtattoo.plaf.fast.FastLookAndFeel" decorated="true" />
+        <item id="HiFi" text="HiFi" tips="黑色风格" type="user" class="com.jtattoo.plaf.hifi.HiFiLookAndFeel" decorated="true" />
+        <item id="Luna" text="Luna" tips="纯XP风格" type="user" class="com.jtattoo.plaf.luna.LunaLookAndFeel" decorated="true" />
+        <item id="McWin" text="McWin" tips="椭圆按钮+绿色按钮背景" type="user" class="com.jtattoo.plaf.mcwin.McWinLookAndFeel" decorated="true" />
+        <item id="Mint" text="Mint" tips="椭圆按钮+黄色按钮背景" type="user" class="com.jtattoo.plaf.mint.MintLookAndFeel" decorated="true" />
+        <item id="Noire" text="Noire" tips="柔和黑" type="user" class="com.jtattoo.plaf.noire.NoireLookAndFeel" decorated="true" />
+        <item id="Smart" text="Smart" tips="木质感+xp风格" type="user" class="com.jtattoo.plaf.smart.SmartLookAndFeel" decorated="true" />
+    </look>
+</magicpwd>

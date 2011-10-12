@@ -1,0 +1,478 @@
+Release Notes for InfoNode Docking Windows Version 1.6.1
+========================================================
+
+Release Date: 2009-02-24
+
+Visit <http://www.infonode.net> for information about InfoNode 
+Docking Windows and other InfoNode products.
+
+
+History
+=======
+
+1.6.1 - 2009-02-24
+------------------
+
+  Fixed bugs:
+
+  - Fixed a bug which caused a line to be drawn under the selected 
+    tab in the ShapedGradientTheme theme.
+
+
+
+1.6.0 - 2009-02-05
+------------------
+
+  Fixed bugs:
+
+  - Fixed a bug that caused windows to be restored in the wrong
+    index of a TabWindow.
+    
+  - Fixed a bug which caused tabs to be stored in incorrect order
+    when writing a layout.
+    
+  - Fixed graphical performance issue with JRE 1.6u10.
+
+
+
+1.5.0 - 2007-01-31
+------------------
+
+  New features:
+  
+  - Added possiblity to control the enabled/disabled state of a tab 
+    by modifying the ENABLED property in the TitledTabProperties in 
+    the TabProperties for a DockingWindow's tab. When the tab is 
+    disabled, the DockingWindow cannot be selected.
+
+  - In 1.4.0 a TabWindow no longer respected its child windows minimum 
+    sizes. A new property called RESPECT_CHILD_WINDOW_MINIMUM_SIZE in 
+    TabWindowProperties has been added that makes it possible to 
+    configure this behaviour. The default value is false i.e. the  
+    minimum sizes are not respected (as in 1.4.0). This will also work 
+    for WindowBars.
+
+  - FloatingWindows can now be created as JFrames instead of JDialogs
+    using the property USE_FRAME in FloatingWindowProperties. Note that
+    this property must be set before the FloatingWindow is created
+    (typically in the default FloatingWindowProperties in the
+    RootWindowProperties).
+
+
+  Fixed bugs:
+
+  - Fixed a bug that caused the window tree not to be updated correctly
+    when calling for example RootWindow.setWindow(). This could result
+    in layouts being incorrectly written.
+
+  - Fixed a bug which caused the size of deserialized FloatingWindows to be
+    too large.
+    
+  - Fixed an issue with restoring a view to a TabWindow that has moved
+    in the window tree.
+
+
+
+1.4.0 - 2005-12-04
+------------------
+
+  New features:
+  
+  - A new DockingWindow called FloatingWindow has been added. 
+    This is a window floating on top of the RootWindow and can be 
+    moved anywhere on the screen. It's possible to drag windows 
+    between a RootWindow and a FloatingWindow or a FloatingWindow 
+    and a FloatingWindow. A window can also be maximized in a 
+    FloatingWindow. Added createFloatingWindow() method to 
+    RootWindow.
+    
+  - New experimental theme called LookAndFeelDockingTheme that tries 
+    to replicate the look using the active look and feel. This theme 
+    may or may not work depending on your look and feel(!)
+    
+  - API change(!). The background color set to null in 
+    ComponentProperties no longer controls the opaque parameter of a 
+    component. Use the setOpaque(...) in the ShapedPanelProperties 
+    for that component instead. All the included themes have been 
+    updated but it may affect other themes.
+    
+  - Added possibility to hide the tab in a TabWindow when it only 
+    contains one tab. The tabs are automatically shown again when 
+    there are more than one tab.
+    
+  - Added DropFilter and DropInfo (SplitDropInfo, ChildDropInfo, 
+    InteriorDropInfo, InsertTabDropInfo) that makes it possible to 
+    filter (accept/reject) all potential drops during a drag and 
+    drop operation. The filters are set in the 
+    DockingWindowDropFilterProperties in the DockingWindowProperties 
+    for the DockingWindow. Per default, all drop types are accepted.
+  
+  - Added support for heavyweight components. This requires Java 
+    1.5.0 and above. The heavyweight component must also support 
+    reparenting i.e. be able to be added to/removed from/readded to 
+    containers. The heayweight support is enabled by creating a 
+    RootWindow with heavyweight support either via the RooWindow's 
+    constructor or via DockingUtil.
+    
+  - Possibility to hide the entire tab area of a TabWindow when it only 
+    contains a single window as a child window, see 
+    TabWindowProperties.getTabbedPanelProperties().getTabAreaProperties()
+    .setTabAreaVisiblePolicy(...).
+  
+  - New methods have been added to DockingWindowListener that make it 
+    possible to listen to undock, dock, maximize, minimize and restore.
+    There are also new listeners DockingWindowListener methods that allows 
+    a listener to abort a minimize, maximize, restore, undock and dock 
+    operation before it's performed.
+  
+  - Added actions: UndockAction, UndockWithAbortAction, DockAction 
+    and DockWithAbortAction that undocks a window to a FloatingWindow 
+    or docks the window back to the RootWindow. Also new actions for 
+    minimize, maximize and restore with abort have been added.
+    
+  - All default button and menu items in the docking windows have been
+    modified to use the new abortable window actions for minimize,
+    maximize and restore.
+    
+  - Added property in WindowBarProperties that makes it possible to 
+    enable/disable continuous layout for window bars content. When 
+    disabled a resize drag indicator is shown. Added color property for 
+    the drag indicator in WindowBarProperties.
+  
+  - Added color property in SplitWindowProperties for drag indicator 
+    that is shown when continuous layout for a SplitWindow is disabled.
+    
+  - Added DeveloperUtil with utility/helper functions for IDW 
+    developers. You can get the current layout in a RootWindow as a 
+    String with pseudo-like Java code. You can also create a frame that 
+    displays the current layout of  a window as pseudo-like Java code.
+    Helpful when for example creating default layouts.
+  
+  - Added getDirection() to WindowBar that returns the bar's Direction 
+    in the RootWindow.
+  
+  - A view now supports a title bar that shows the view's title and 
+    icon. The bar also support a minimize, restore, dock, undock and 
+    a close button. It's possible to add custom components to the 
+    title bar by calling View.getCustomTitleBarComponents() and adding 
+    components to the list. The title bar supports hovering and the 
+    view can also be dragged via the title bar.
+    
+  - A dragged window can be dropped onto the title bar of a View and 
+    it will be added as a tab to the TabWindow the View is a member of.
+    
+  - A new properties class called ViewTitleBarProperties has been 
+    added. It contsins two ViewTitleBarStateProperties for normal 
+    and focused state. It's  retreived from the ViewProperties in the 
+    RootWindowProperties or from the ViewProperties for a View. It 
+    contains functional and visual properties for the view title bar.
+    
+  - Added PropertiesUtil that contains utility functions for 
+    manipulating properties. It has a function that modifies a 
+    RootWindowsProperties object so that the views show title bars 
+    and the tabs are oriented below the content area.
+    
+  - Scroll buttons and tab drop down list now have default tool tips.
+  
+  - Modified TabWindow's minimum size so that the entire content 
+    area can be minimized when for example resizing a Splitwindow.
+
+  - Added CloseOthersWindowAction which closes all tabs in an
+    AbstractTabWindow except the one belonging to the window the
+    action is performed upon. It is also added to the default
+    popup menu.
+
+  - Changes to button factory properties will now cause new buttons
+    to be created.
+
+  - All internal references to a view can now be removed using
+    RootWindow.removeView(). This is useful if you have views that
+    you want to remove permanently and don't want to be part of a
+    serialized window layout. Note that only weak references
+    to the views are stored in a RootWindow, so it's not necessary to
+    call this method if you want to clear the references immediately.
+    
+  - The drag label now (per default) uses the same font and colors as 
+    for the ooltip.
+    
+  - If the look and feel for the RootWindow changes, the RootWindow 
+    will update the UI for all views added to the RootWindow. This 
+    means that closed views that have not been removed from the 
+    RootWindow will also be updated.
+
+
+  Fixed bugs:
+  
+  - Fixed so that popup menu isn't shown when aborting dragging of 
+    a TabWindow.
+
+  - Fixed memory leaks that occured when creating and releasing a 
+    RootWindow.
+
+  - Fixed bug #1200629. Previously Swing timers was used internally 
+    in IDW which caused the JVM to continue running when a JFrame 
+    was disposed. These timers have been removed.
+    
+  - Fixed border bug around tab area components on window bar when 
+    using SoftBlueIceDockingTheme
+
+
+
+1.3.0 - 2005-02-16
+------------------
+
+  New features:
+
+  - Added methods for preferred minimize direction. See
+    DockingWindow.setPreferredMinimizeDirection() and
+    DockingWindow.getPreferredMinimizeDirection(). 
+
+  - Much improved window restore algorithm which should be able to
+    restore most layouts correctly. Note that when restoring tab and
+    split windows, the actual tab and split window is not restored,
+    but rather the views inside it. See the developer's guide for
+    more information.
+
+  - When pressing the Shift key during a window drag and drop the
+    tab will not be selected on drag and drop. This makes it
+    possible to enable tab selection on mouse button press and
+    still drag a tab into the selected tab in the same tabbed
+    panel. Use RootWindowProperties.getTabWindowProperties().
+    getTabbedPanelProperties().setTabSelectTrigger() to enable
+    tab selection on mouse button press.
+
+  - Made it easier to split a window inside a TabWindow by
+    enlarging the split detection area for the inner window.
+    Also increased RootWindowProperties.EDGE_SPLIT_DISTANCE to 6
+    to simplify splitting.
+
+  - Added the possibility of triggering window drags from
+    the outside. See the net.infonode.docking.drag package and
+    especially the DockingWindowDragSource class.
+
+  - Added support for custom components in the tab area of an
+    AbstractTabWindow. The components are shown between the scroll
+    buttons and the close/minimize/restore buttons. See
+    AbstractTabWindow.getCustomTabAreaComponents().
+
+  - Added support for custom components in a view tab.
+    The components are shown between the window title and the
+    close/minimize/restore buttons. See
+    View.getCustomTabComponents().
+
+  - Added DockingWindowActionProvider's, see the
+    net.infonode.docking.action package.
+
+  - Added a property for the action performed when a docking
+    window button is clicked, see
+    WindowTabButtonProperty.ACTION_PROVIDER. Setting this property
+    will overrride the default action, for example minimize.
+
+  - WindowMenuUtil now displays icons in the popup menus. It uses
+    action providers to get the icons.
+
+  - Added support for adding mouse button listeners to a window tab.
+    The listeners are called when a mouse button is pressed, clicked
+    or released on the window tab. See
+    DockingWindow.addTabMouseButtonListener() and
+    DockingWindow.removeTabMouseButtonListener().
+
+  - Added new methods to DockingWindowListener. Events are
+    now generated when a window is added, removed, shown, hidden or
+    when the view focus changes.
+
+  - Added a DockingWindowTitleProvider interface which provides
+    a title for a docking window. It can be set on a window using
+    the DockingWindowProperties.TITLE_PROVIDER property. The
+    SimpleDockingWindowTitleProvider is the title provider used
+    for a window when there is no title provider in the window
+    properties. LengthLimitedDockingWindowTitleProvider is a docking
+    window title provider that provides a title that can be length
+    limited.
+
+
+  Fixed bugs:
+
+  - Fixed a bug that caused an indication that a window could be
+    splitted with itself.
+
+  - Fixed a bug that caused an exception in the popup menu
+    factories created in WindowMenuUtil when triggering the popup menu
+    on the root window and all views are added to the root window.
+
+  - Fixed a bug that caused the window buttons to change appearance
+    when using for example Skin Look and Feel. Now the buttons never
+    change UI class.
+
+
+
+1.2.0 - 2004-11-12
+------------------
+
+  - The commercial distribution is distributed under a slightly
+    modified license, InfoNode Software License Version 1.1. The
+    changes include a section about not being allowed to expose
+    IDW functionality to external software components and
+    a section that grants the licensee the right to obfuscate IDW
+    together with a product.
+
+
+  New features:
+
+  - GradientDockingTheme is modified so that it uses the
+    ComponentPainter instead of the border of the window area to
+    paint the window area background.
+
+  - Added two new theme classes: ClassicDockingTheme,
+    SoftBlueIceDockingTheme and ShapedGradientDockingTheme. Both
+    themes uses the new shaped tab functionality in ITP.
+
+  - Added weak listener support for PropertyMap's. See
+    net.infonode.properties.propertymap.PropertyMapWeakListenerManager
+    for more information.
+
+  - Added some window popup menu items for SplitWindow's, see
+    WindowMenuUtil.createWindowMenuFactory.
+
+  - Better window tree optimization handling.
+
+  - Added a new SplitWindow property which can be used disable
+    divider location dragging, see
+    SplitWindowProperties.DIVIDER_LOCATION_DRAG_ENABLED.
+
+  - Added a property DockingWindow.RESTORE_ENABLED which makes
+    it possible to disable the restore operation for a window.
+    Added method DockingWindow.isRestorable().
+
+  - Added a property DockingWindow.CLOSE_ENABLED which makes
+    it possible to disable the close operation for a window.
+    Added method DockingWindow.isClosable().
+
+  - Added a property DockingWindow.MAXIMIZE_ENABLED which makes
+    it possible to disable the maximize operation for a window.
+    Added method DockingWindow.isMaximizable().
+
+  - Added a property DockingWindow.MINIMIZE_ENABLED which makes
+    it possible to disable the minimize operation for a window. 
+
+  - Added a property DockingWindow.DRAG_ENABLED which makes
+    it possible to disable the mouse drag for a window.
+
+  - Improved the window splitting when dragging a window. The empty
+    space above the tabs in a TabWindow is now removed.
+
+  - Added ShapedPanelProperties for the drag rectangle, see
+    RootWindowProperties.DRAG_RECTANGLE_PROPERTIES.
+
+  - Added ShapedPanelProperties for the window area, see
+    RootWindowProperties.WINDOW_AREA_SHAPED_PANEL_PROPERTIES.
+
+  - Added ShapedPanelProperties for the root window, see
+    RootWindowProperties.SHAPED_PANEL_PROPERTIES.
+
+
+  Fixed bugs:
+  
+  - Fixed a property bug which caused some listener to be garbage
+    collected even when they could possibly be called. This caused the
+    highlighted font to be of incorrect size in some themes.
+
+  - Fixed minimum size for WindowBar content panel. 
+
+  - If a window popup menu is empty it is not shown.
+
+  - Fixed a bug which caused the window set with RootWindow.setWindow() 
+    not to be immediately displayed on the screen.
+
+
+
+1.1.0 - 2004-09-29
+------------------
+  
+  - A small source code example application on how to use InfoNode 
+    Docking Windows can be found in "examples/net/infonode/docking/example".  
+    It is possible to compile and run the example.
+
+
+  New features:
+
+  - Docking windows can now be maximized to cover the entire root
+    window (except window bars) and later restored to their
+    previous location. See the DockingWindow.maximize() and
+    DockingWindow.isMaximized() methods.
+
+  - Buttons for minimize, close, restore and maximize has been
+    added to the TabWindow. These buttons are customizable the
+    same way as tab buttons are.
+
+  - Added listener functionality to DockingWindow. This makes it
+    possible to get callbacks before and after a window is closed.
+    See DockingWindowListener and DockingWindow.addListener()
+    for more information.
+
+  - A new theme has been added, see GradientDockingTheme. This theme
+    paints gradient tab backgrounds and supports an opaque title bar
+    for TabWindow's, similar to the Eclipse tabbed windows.
+
+  - Added two new methods in DockingWindow to show a window,
+    makeVisible(), and request/restore focus for a window,
+    restoreFocus().
+
+  - Added a method DockingUtil.addWindow() which adds a window 
+    inside a root window if it's not already there.
+
+  - Added a class net.infonode.docking.util.StringViewMap which allows
+    views to be identified by their title or another string. The
+    DockingUtil class has been modified to support this view map.
+
+  - The window tab buttons are now fully customizable through
+    button factories. See the WindowTabButtonProperties.FACTORY
+    property for more information.
+
+  - A window now remembers the window bar where it was last located
+    and is minimized to that window bar the next time.
+
+  - Better focus handling to avoid flickering graphics and
+    temporary focus owner changes when selecting tabs.
+
+  - The window tab buttons tool tip text can now be modified. See
+    the WindowTabButtonProperties.TOOL_TIP_TEXT property for more
+    information.
+
+  - A new property called "Continuous Layout Enabled" has been added
+    to the split window properties. This property has the same effect
+    as in a JSplitPane.
+    
+  - Closed views is written by the RootWindow.write() method
+    of the last RootWindow they were located in.
+
+  - Added removeSuperObject() methods to the property classes.
+  
+    
+  Fixed bugs:
+
+  - Fixed bug 1026492 which caused an IndexOutOfBoundsException
+    when restoring a window to a tab window where tabs have been removed.
+
+  - Fixed a bug which caused an exception when reading window layouts.
+    This occured when the layout contained many views and property
+    values.
+
+  - Fixed a bug which caused windows to remain on window bars when
+    reading a window layout. This could result in IOException being
+    thrown.
+
+  - Fixed a bug where the mouse hover highlight remained on buttons.
+
+  - Fixed a bug in PropertyMap which caused parent super maps to be
+    added in incorrect order.
+
+
+
+1.0.0 - 2004-08-12
+------------------
+
+  - Initial version
+
+
+Copyright (c) 2004 - 2009 NNL Technology AB, www.nnl.se

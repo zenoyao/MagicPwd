@@ -1,0 +1,25 @@
+<magicpwd>
+    <look group="Substance">
+        <item id="SubstanceBusiness" text="Business" tips="Business" type="user" class="org.pushingpixels.substance.api.skin.SubstanceBusinessLookAndFeel" decorated="false"/>
+        <item id="SubstanceBusinessBlackSteel" text="Business Black Steel" tips="Business Black Steel" type="user" class="org.pushingpixels.substance.api.skin.SubstanceBusinessBlackSteelLookAndFeel" decorated="false"/>
+        <item id="SubstanceBusinessBlueSteel" text="Business Blue Steel" tips="Business Blue Steel" type="user" class="org.pushingpixels.substance.api.skin.SubstanceBusinessBlueSteelLookAndFeel" decorated="false"/>
+        <item id="SubstanceCreme" text="Creme" tips="Creme" type="user" class="org.pushingpixels.substance.api.skin.SubstanceCremeLookAndFeel" decorated="false"/>
+        <item id="SubstanceCremeCoffee" text="Creme Coffee" tips="Creme Coffee" type="user" class="org.pushingpixels.substance.api.skin.SubstanceCremeCoffeeLookAndFeel" decorated="false"/>
+        <item id="SubstanceDust" text="Dust" tips="Dust" type="user" class="org.pushingpixels.substance.api.skin.SubstanceDustLookAndFeel" decorated="false"/>
+        <item id="SubstanceDustCoffee" text="Dust Coffee" tips="Dust Coffee" type="user" class="org.pushingpixels.substance.api.skin.SubstanceDustCoffeeLookAndFeel" decorated="false"/>
+        <item id="SubstanceGemini" text="Gemini" tips="Gemini" type="user" class="org.pushingpixels.substance.api.skin.SubstanceGeminiLookAndFeel" decorated="false"/>
+        <item id="SubstanceModerate" text="Moderate" tips="Moderate" type="user" class="org.pushingpixels.substance.api.skin.SubstanceModerateLookAndFeel" decorated="false"/>
+        <item id="SubstanceNebula" text="Nebula" tips="Nebula" type="user" class="org.pushingpixels.substance.api.skin.SubstanceNebulaLookAndFeel" decorated="false"/>
+        <item id="SubstanceNebulaBrickWall" text="Nebula Brick Wall" tips="Nebula Brick Wall" type="user" class="org.pushingpixels.substance.api.skin.SubstanceNebulaBrickWallLookAndFeel" decorated="false"/>
+        <item id="SubstanceOfficeSilver2007" text="Office Silver 2007" tips="Office Silver 2007" type="user" class="org.pushingpixels.substance.api.skin.SubstanceOfficeSilver2007LookAndFeel" decorated="false"/>
+        <item id="SubstanceSahara" text="Sahara" tips="Sahara" type="user" class="org.pushingpixels.substance.api.skin.SubstanceSaharaLookAndFeel" decorated="false"/>
+        <item id="SubstanceOfficeBlue2007" text="Office Blue 2007" tips="Office Blue 2007" type="user" class="org.pushingpixels.substance.api.skin.SubstanceOfficeBlue2007LookAndFeel" decorated="false"/>
+        <item id="SubstanceMagellan" text="Magellan" tips="Magellan" type="user" class="org.pushingpixels.substance.api.skin.SubstanceMagellanLookAndFeel" decorated="false"/>
+        <item id="SubstanceChallengerDeep" text="Challenger Deep" tips="Challenger Deep" type="user" class="org.pushingpixels.substance.api.skin.SubstanceChallengerDeepLookAndFeel" decorated="false"/>
+        <item id="SubstanceEmeraldDusk" text="Emerald Dusk" tips="Emerald Dusk" type="user" class="org.pushingpixels.substance.api.skin.SubstanceEmeraldDuskLookAndFeel" decorated="false"/>
+        <item id="SubstanceMagma" text="Magma" tips="Magma" type="user" class="org.pushingpixels.substance.api.skin.SubstanceMagmaLookAndFeel" decorated="false"/>
+        <item id="SubstanceRaven" text="Raven" tips="Raven" type="user" class="org.pushingpixels.substance.api.skin.SubstanceRavenLookAndFeel" decorated="false"/>
+        <item id="SubstanceGraphiteAqua" text="Graphite Aqua" tips="Graphite Aqua" type="user" class="org.pushingpixels.substance.api.skin.SubstanceGraphiteAquaLookAndFeel" decorated="false"/>
+        <item id="SubstanceTwilight" text="Twilight" tips="Twilight" type="user" class="org.pushingpixels.substance.api.skin.SubstanceTwilightLookAndFeel" decorated="false"/>
+    </look>
+</magicpwd>

@@ -1,0 +1,5 @@
+<magicpwd>
+    <look group="GTK">
+        <item id="GTK" text="GTK" tips="GTK" type="java" class="com.sun.java.swing.plaf.gtk.GTKLookAndFeel" decorated="false" platform="lin" />
+    </look>
+</magicpwd>

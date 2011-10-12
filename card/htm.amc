@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicpwd>
+    <base>
+        <name>网页格式</name>
+        <type>htm</type>
+    </base>
+    <card>
+        <template-uri>card/amon.htm</template-uri>
+        <template-res>card/amon</template-res>
+    </card>
+</magicpwd>

@@ -1,0 +1,10 @@
+<magicpwd>
+    <look group="Tiny">
+        <item id="Tiny" text="Tiny" tips="Tiny" type="user" class="de.muntjak.tinylookandfeel.TinyLookAndFeel" decorated="true">
+            <property>
+                <string key="swing.aatext" value="true"/>
+                <string key="defaultFont" value="宋体"/>
+            </property>
+        </item>
+    </look>
+</magicpwd>

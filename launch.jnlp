@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jnlp codebase="http://mpwd.sinaapp.com/jnlp/" href="launch.jnlp" spec="1.0+">
+    <information>
+        <title>MagicPwd</title>
+        <vendor>Amon</vendor>
+        <homepage href="http://amon.me/mpwd/"/>
+        <description>魔方密码是一款开放源代码的跨平台密码管理软件，100%纯Java语言开发，其主要目标是在充分保障用户数据安全的基础上，做到同一数据能够方便的在多种操作平台上使用。软件采用目前国际上通用的标准商用加密算法保证您的数据机密性，支持用户自定义数据、支持随机密码生成、支持基于云存储的数据备份与恢复、支持邮件检测及记事提醒等功能。</description>
+        <description kind="short">魔方密码，开源的跨平台密码管理软件！</description>
+        <icon href="logo/logo64.png" width="64" height="64"/>
+        <icon href="logo/logo32.png" width="32" height="32"/>
+        <icon href="logo/logo16.png" width="16" height="16"/>
+        <icon href="splash.png" width="424" height="222" kind="splash"/>
+        <offline-allowed/>
+    </information>
+    <security>
+        <all-permissions/>
+    </security>
+
+    <resources>
+        <j2se version="1.6+"/>
+        <jar eager="true" href="magicpwd.jar" main="true"/>
+
+        <jar href="lib/hsqldb-2.1.0.jar"/>
+        <jar href="lib/jaxen-1.1.1.jar"/>
+        <jar href="lib/dom4j-1.6.1.jar"/>
+        <jar href="lib/mail-1.4.4.jar"/>
+        <jar href="lib/image4j-0.7.jar"/>
+        <jar href="lib/arity-2.1.7.jar"/>
+        <jar href="lib/tar-2.5.0.jar"/>
+        <jar href="lib/nutz-1.b.38-X.jar"/>
+        <jar href="lib/substance-5.2.jar"/>
+        <jar href="lib/trident-6.1.jar"/>
+        <jar href="lib/looks-2.3.1.jar"/>
+        <jar href="lib/versioncheck.jar"/>
+		
+		<jar href="ext/example.jar"/>
+    </resources>
+    <application-desc main-class="com.magicpwd.MagicPwd">
+        <argument>web</argument>
+    </application-desc>
+</jnlp>

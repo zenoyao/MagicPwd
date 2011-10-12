@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicpwd>
+    <base>
+        <name>粉色女生</name>
+        <type>png</type>
+    </base>
+    <card>
+        <base width="400" height="240" background-color="#00ffff" background-image="card/girl.png" background-image-style="scale" />
+        <draw method="text" x="30" y="50" color="#000000" font-name="微软雅黑" font-size="32" font-style="1">#姓##名#</draw>
+        <draw method="text" x="30" y="90" color="#000000" font-name="微软雅黑" font-size="32" font-style="1">#昵称#</draw>
+        <draw method="text" x="30" y="120" color="#000000" font-name="微软雅黑" font-size="18">#职位#</draw>
+    </card>
+</magicpwd>

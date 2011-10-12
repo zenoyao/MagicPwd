@@ -1,0 +1,6 @@
+<magicpwd>
+    <look group="Windows">
+        <item id="Windows" text="Windows" tips="Windows" type="java" class="com.sun.java.swing.plaf.windows.WindowsLookAndFeel" decorated="false" platform="win" />
+        <item id="WindowsClassic" text="Windows Classic" tips="Windows Classic" type="java" class="com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel" decorated="false" platform="win" />
+    </look>
+</magicpwd>

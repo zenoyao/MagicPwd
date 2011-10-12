@@ -1,0 +1,5 @@
+<magicpwd>
+    <look group="IDW">
+        <item id="InfoNode" text="IDW" tips="IDW" type="user" class="net.infonode.gui.laf.InfoNodeLookAndFeel" decorated="false" />
+    </look>
+</magicpwd>

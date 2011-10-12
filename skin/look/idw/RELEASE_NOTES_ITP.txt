@@ -1,0 +1,321 @@
+Release Notes for InfoNode Tabbed Panel Version 1.6.1
+=====================================================
+
+Release Date: 2009-02-24
+
+Visit <http://www.infonode.net> for information about InfoNode
+Docking Windows and other InfoNode products.
+
+
+History
+=======
+
+1.6.1 - 2009-02-24
+------------------
+
+  Fixed bugs:
+
+  - Fixed a bug which caused a line to be drawn under the selected 
+    tab in the ShapedGradientTheme theme.
+  
+
+
+1.6.0 - 2009-02-05
+------------------
+
+  Fixed bugs:
+
+  - Fixed an index out bounds bug in drag code.
+  
+  - Fixed an index out bounds bug in LookAndFeel theme.
+  
+  - Misc. code cleanups
+  
+
+
+1.5.0 - 2007-01-31
+------------------
+
+  New features:
+
+  - TitledTab can now be enabled/disabled using the ENABLED 
+    property in the TitledTabProperties for the tab. The method 
+    TitledTab.setEnabled(...) will modify the property.
+
+
+
+1.4.0 - 2005-12-04
+------------------
+
+  New Features:
+  
+  - New experimental theme called LookAndFeelTheme that tries 
+    to replicate the JTabbedPane's look using the active look 
+    and feel. This theme may or may not work depending on your 
+    look and feel(!)
+
+  - API change(!). The background color set to null in 
+    ComponentProperties no longer controls the opaque parameter 
+    of a component. Use the setOpaque(...) in the 
+    ShapedPanelProperties for that component instead. All the 
+    included themes have been updated but it may affect other 
+    themes.
+    
+  - Added TabAreaVisiblePolicy and TabAreaVisiblePolicyProperty 
+    that makes it possible to specify visibility policy i.e. 
+    when the tab area should be visible. There are 4 policies, 
+    ALWAYS, NEVER, TABS_EXIT and MORE_THAN_ONE_TAB. Also added 
+    TabbedPanel.isTabAreaVisible().
+    
+  - Added TabbedPanel.scrollTabToVisibleArea(Tab) that scrolls 
+    the given tab into the visible part of the tab area.
+  
+  - Major optimization of TabbedPanel and TitledTab. Increased 
+    performance when adding/removing tabs, updating properties 
+    and mouse hovering.
+    
+  - Added new hover policy called ALWAYS_AND_EXCLUDE. It's the 
+    same as policy ALWAYS but the TabbedPanel will be excluded 
+    by other TabbedPanels when their hover policies are evaluated.
+    
+  - Added possibility to disable the TitledTab's focus marker, 
+    see FOCUS_MARKER_ENABLED property in TitledTabProperties.
+  
+  - Added new TabbedPanel constructor that makes it possbile to 
+    choose if a custom content area should use the content area 
+    properties or not.
+    
+  - TabContentPanel can now be constructed and the TabbedPanel 
+    set at a later time.
+  
+  
+  Fixed bugs:
+  
+  - Sometimes the tab drop down list button was shown even if it 
+    shouldn't be shown.
+  
+  - The right (or down) scroll button wasn't always enabled when 
+    tabs were scrolled out to the right (or down).
+  
+  - TabbedPanel now uses a tab area component's preferred size 
+    when laying out component in the tab area.
+
+  - Classic theme now draws correct borders around tab area 
+    components when the tab area orientation is down or left. 
+
+
+
+1.3.0 - 2005-02-16
+------------------
+
+  New Features:
+  
+  - TitledTab now supports mouse hovering. It is possible to 
+    specify a hover listener in the TitledTabProperties that will 
+    be called when the tab is hovered by the mouse.
+  
+  - TabbedPanel supports mouse hovering. It is possible to specify 
+    hover listeners for the entire tabbed panel, the tab area, the 
+    tab area components area and the content area in the properties 
+    objects. The hover policy can be changed using 
+    TabbedPanelHoverPolicy in the TabbedPanelProperties.
+    
+  - TabbedPanelHoverAction is a convenient hover action that 
+    implements the HoverListener interface and contains a 
+    TabbedPanelProperties object that is automatically added 
+    to/removed from (as super object) the hovered tabbed panel (or 
+    any of its hovered areas). This makes it easy to modify 
+    properties for a TabbedPanel or any of its areas when the 
+    TabbedPanel is hovered by the mouse.
+    
+  - TitledTabHoverAction is a convenient hover action that implements 
+    the HoverListener interface and contains a TitledTabProperties 
+    object that is automatically added to/removed from (as super 
+    object) the hovered titled tab. This makes it easy to modify 
+    properties for a TitledTab when the tab is hovered by the mouse.
+    
+  - TitledTabDelayedMouseExitHoverAction wraps a HoverListener and 
+    delays the hover listener's mouse exit when the TitledTab is no 
+    longer hovered.
+    
+  - TabbedPanelTitledTabHoverAction is a hover action that is meant 
+    to be used on a TabbedPanel (or any of its areas) an not on the 
+    TitledTab. It makes it easy to change both TabbedPanelProperties 
+    and TitledTabProperties when a TabbedPanel (or any of its areas) 
+    is hovered by the mouse.
+    
+  - TitledTabTabbedPanelHoverAction is a hover action that is meant 
+    to be used on a TitledTab and not on a TabbedPanel. It makes it 
+    easy to change both TabbedPanelProperties for the TabbedPanel 
+    that the TitledTab is memember of and the TitledTabProperties 
+    for the TitledTab when the TitledTab is hovered by the mouse.
+    
+  - Added hasContentArea() function to tabbed panel that returns if 
+    the tabbed panel has a content area or not.
+    
+  - Added possibility to remove a specific properties super object. 
+    Developers should consider using removeSuperObject(...) instead 
+    of removeSuperObject().
+  
+  - Holding down the shift key and then press/click/release/drag the 
+    tab will not select the tab regardless of tab selection policy. 
+    This makes it possible to reorder tabs without selecting or 
+    highlighting them (just enable tab reordering and disable 
+    highlight pressed tab so that the pressed tab is not highlighted 
+    if it wasn't already highlighted).
+  
+  - It is now possible to customize the scroll buttons and the tab 
+    drop down list button. You can assign your own buttons, change 
+    the icon and set tool tip text. Each button (scroll 
+    up/down/left/right and drop down list) has a seperate 
+    ButtonProperties object. These objects are gathered in 
+    TabbedPanelButtonProperties that is part of TabbedPanelProperties 
+    and is retrieved by calling getButtonProperties() in the 
+    TabbedPanelProperties.
+
+
+  Fixed bugs:
+
+  - Gtk look and feel now works, but the colors in tabs and tabbed 
+    panels will be strange because almost no colors are set in the 
+    UIManager by this look and feel.
+
+
+
+1.2.0 - 2004-11-12
+------------------
+
+  - The commercial distribution is distributed under a slightly
+    modified license, InfoNode Software License Version 1.1. The
+    changes include a section about not being allowed to expose
+    ITP functionality to external software components and
+    a section that grants the licensee the right to obfuscate ITP
+    together with a product.
+
+
+  New Features:
+  
+  - Added a new theme called ShapedGradientTheme with support for 
+    tabs with slopes on left and right side. 
+  
+  - Added weak listener support for PropertyMap's. See
+    net.infonode.properties.propertymap.PropertyMapWeakListenerManager
+    for more information.
+
+  - Possible to assign shaped borders to the tab area, tab area 
+    components area, content area and titled tab. Creating a border 
+    using the ShapedBorder interface makes it possible to have 
+    non-rectaungular shapes and create different looking titled tabs 
+    by returning an java.awt.Shape. Events will only be triggered 
+    inside of the shape.
+    
+  - New properties object called ShapedPanelProperties in 
+    TabAreaProperties, TabAreaComponentProperties, 
+    TabbedPanelContentPanelProperties and TitledTabStateProperties. 
+    This makes it possible to specify component painters for painting 
+    the background of the tab area, tab area components area, content 
+    area and titled tab. If a shaped border is set, the painters 
+    and/or background color will only be painted inside of the shape.
+    
+  - Added a new theme called ClassicTheme with TitledTabs with round 
+    edges. Colors are taken from the current look and feel.
+    
+  - Added a new theme called SoftBlueIceTheme with round borders and 
+    gradients as backgrounds.
+  
+  - Tab spacing can now be a negative value i.e. the tabs will 
+    overlap. It's possible to specify the tab depth order i.e. 
+    descending or ascending from the first tab. The highlighted tab 
+    will always be displayed as the top most tab.
+    
+  - Default tab spacing is now -1 instead of 0.
+    
+  - TabLineBorder is now deprecated because of added support for 
+    negative tab spacing. Consider using TabAreaLineBorder instead.
+
+
+  Enhancements:
+
+  - Gradient painter performance improvement.
+  
+  - OpenContentBorder now supports a color for the top and left line 
+    and another color for the bottom and right lines
+  
+
+  Fixed bugs:
+
+  - Fixed a bug which caused a dragged Tab to be inserted first in the 
+    TabbedPanel when it should be last.
+
+  - Fixed so that gradient borders now can be alpha transparent.
+    
+  - Fixed TabbedPanel's preferred size because it was incorrect in some 
+    cases.
+
+
+1.1.0 - 2004-09-29
+------------------
+
+  - A source code example application called SimpleTabbedPanelExample
+    can be found in "examples/net/infonode/tabbedpanel/example".  
+    It shows how to create a tabbed panel, titled tabs, modify 
+    properties and use themes. It is possible to compile and run the 
+    example.
+
+
+  New Features:
+
+  - A tab is now by default selected on mouse press instead of mouse 
+    release.
+    
+  - A new theme has been added, see GradientTheme. This theme paints
+    gradient tab backgrounds and supports an opaque tab area.
+
+  - A new tabbed panel property called PAINT_TAB_AREA_SHADOW has been
+    added. Setting this to true will paint a continuous shadow for the
+    tab area of a tabbed panel. Setting it to false paints a shadow
+    for the highlighted tab and the tab area components panel.  
+
+  - Improved shadow painting. Shadow is now painted for the tab area
+    components panel as well.
+
+  - When the tab area only contains one tab, the tab will be 
+    compressed even if scrolling layout policy is activated
+
+  - Added possibility to set a list of JComponents to be shown next 
+    to the tabs in the tab area. The components are laid out in a 
+    line with direction right or down depending on the tab area 
+    orientation. Useful for adding buttons etc.
+
+  - Added a tab drop down list button to the tab area.
+    Makes it possible to show a combobox next to the tabs in the tab 
+    area with a list of the tabs in the tabbed panel. Controlled by 
+    a property.
+
+  - Added tab select trigger property.
+    Makes it possible to set if a tab is selected on mouse press or 
+    release.
+
+  - Set visible property for titled tab's text, icon and title 
+    component. Possibility to hide and show the text, the icon and 
+    the titled component even though they are set. 
+
+
+  Fixed bugs:
+  
+  - Fixed a bug so that content area border is repainted when a tab is 
+    selected without using a mouse.
+    
+  - Fixed a bug which caused tabs to be incorrectly rendered when 
+    rotating the tab direction. The tab insets weren't correctly 
+    rotated.
+
+  		   
+
+1.0.0 - 2004-08-12
+------------------
+
+  - Initial version
+
+
+Copyright (c) 2004 - 2009 NNL Technology AB, www.nnl.se

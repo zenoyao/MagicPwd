@@ -1,0 +1,30 @@
+<magicpwd>
+    <look group="Quaqua">
+        <item id="Quaqua" text="Quaqua" tips="Quaqua" type="user" class="ch.randelshofer.quaqua.QuaquaLookAndFeel" decorated="true" platform="mac">
+            <property>
+                <string key="swing.aatext" value="true"/>
+                <string key="apple.laf.useScreenMenuBar" value="true"/>
+                <string key="com.apple.macos.useScreenMenuBar" value="true"/>
+            </property>
+        </item>
+        <item id="BasicQuaqua" text="Quaqua Basic" tips="Quaqua Basic" type="user" class="ch.randelshofer.quaqua.BasicQuaquaLookAndFeel" decorated="true" platform="mac" />
+        <item id="Quaqua15Jaguar" text="Jaguar" tips="Jaguar" type="user" class="ch.randelshofer.quaqua.jaguar.Quaqua15JaguarLookAndFeel" decorated="true" platform="mac" />
+        <item id="Quaqua15Leopard" text="Leopard" tips="Leopard" type="user" class="ch.randelshofer.quaqua.leopard.Quaqua15LeopardLookAndFeel" decorated="true" platform="mac" />
+        <item id="Quaqua15LeopardCrossPlatform" text="Leopard Cross Platform" type="user" tips="Leopard Cross Platform" class="ch.randelshofer.quaqua.leopard.Quaqua15LeopardCrossPlatformLookAndFeel" decorated="true">
+            <property>
+                <string key="swing.aatext" value="true"/>
+                <string key="apple.laf.useScreenMenuBar" value="true"/>
+                <string key="com.apple.macos.useScreenMenuBar" value="true"/>
+            </property>
+        </item>
+        <item id="Quaqua16SnowLeopard" text="Snow Leopard" tips="Snow Leopard" type="user" class="ch.randelshofer.quaqua.snow_leopard.Quaqua16SnowLeopardLookAndFeel" decorated="true" platform="mac" />
+        <item id="Quaqua15Tiger" text="Tiger" tips="Tiger" type="user" class="ch.randelshofer.quaqua.tiger.Quaqua15TigerLookAndFeel" decorated="true" platform="mac" />
+        <item id="Quaqua15TigerCrossPlatform" text="Tiger Cross Platform" tips="Tiger Cross Platform" type="user" class="ch.randelshofer.quaqua.tiger.Quaqua15TigerCrossPlatformLookAndFeel" decorated="true">
+            <property>
+                <string key="swing.aatext" value="true"/>
+                <string key="apple.laf.useScreenMenuBar" value="true"/>
+                <string key="com.apple.macos.useScreenMenuBar" value="true"/>
+            </property>
+        </item>
+    </look>
+</magicpwd>

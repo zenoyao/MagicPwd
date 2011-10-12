@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicpwd>
+    <strokes id="mpad">
+        <action id="file-search" class="com.magicpwd.e.mpad.FindAction">
+            <stroke key="^ F" />
+        </action>
+        <action id="exit-window" class="com.magicpwd.e.mpad.ExitAction">
+            <stroke key="^ Q" />
+        </action>
+        <action id="lock-window" class="com.magicpwd.e.mpad.LockAction">
+            <stroke key="^ L" />
+        </action>
+        <action id="hide-window" class="com.magicpwd.e.mpad.HideAction">
+            <stroke key="^ H" />
+            <stroke key="^ Enter" />
+        </action>
+        <action id="show-mpro" class="com.magicpwd.e.tray.MproAction">
+            <stroke key="^ # P" />
+        </action>
+        <action id="show-mwiz" class="com.magicpwd.e.tray.MwizAction">
+            <stroke key="^ # W" />
+        </action>
+    </strokes>
+</magicpwd>

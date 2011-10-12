@@ -1,0 +1,5 @@
+<magicpwd>
+    <look>
+        <item id="Nimbus" text="Nimbus" tips="Nimbus" type="java" class="com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel" decorated="false" />
+    </look>
+</magicpwd>

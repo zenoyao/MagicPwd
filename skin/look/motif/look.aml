@@ -1,0 +1,5 @@
+<magicpwd>
+    <look>
+        <item id="Motif" text="Motif" tips="Motif" type="java" class="com.sun.java.swing.plaf.motif.MotifLookAndFeel" decorated="false" />
+    </look>
+</magicpwd>

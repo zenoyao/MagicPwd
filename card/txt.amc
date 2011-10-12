@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicpwd>
+    <base>
+        <name>文本格式</name>
+        <type>txt</type>
+    </base>
+    <card>
+        <template-uri>card/amon.txt</template-uri>
+    </card>
+</magicpwd>

@@ -1,0 +1,7 @@
+<magicpwd>
+    <look group="Office">
+        <item id="OfficeXP" text="Office XP" tips="Office XP" type="user" class="org.fife.plaf.OfficeXP.OfficeXPLookAndFeel" decorated="false" />
+        <item id="Office2003" text="Office 2003" tips="Office 2003" type="user" class="org.fife.plaf.Office2003.Office2003LookAndFeel" decorated="false" />
+        <item id="VisualStudio2005" text="Visual Studio 2005" tips="Visual Studio 2005" type="user" class="org.fife.plaf.VisualStudio2005.VisualStudio2005LookAndFeel" decorated="false" />
+    </look>
+</magicpwd>

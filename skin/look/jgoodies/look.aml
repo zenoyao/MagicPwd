@@ -1,0 +1,8 @@
+<magicpwd>
+    <look group="JGoodies">
+        <item id="Windows" text="Windows" tips="Windows" type="user" class="com.jgoodies.looks.windows.WindowsLookAndFeel" decorated="false"/>
+        <item id="Plastic" text="Plastic" tips="Plastic" type="user" class="com.jgoodies.looks.plastic.PlasticLookAndFeel" decorated="false"/>
+        <item id="Plastic3D" text="Plastic 3D" tips="Plastic 3D" type="user" class="com.jgoodies.looks.plastic.Plastic3DLookAndFeel" decorated="false"/>
+        <item id="PlasticXP" text="Plastic XP" tips="Plastic XP" type="user" class="com.jgoodies.looks.plastic.PlasticXPLookAndFeel" decorated="false"/>
+    </look>
+</magicpwd>

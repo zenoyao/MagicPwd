@@ -1,0 +1,9 @@
+<magicpwd>
+    <look group="SeaGlass">
+        <item id="SeaGlass" text="SeaGlass" tips="SeaGlass" type="user" class="com.seaglasslookandfeel.SeaGlassLookAndFeel" decorated="false">
+            <resource>
+                <font for="defaultFont" font-name="宋体" font-size="12" font-style="plain" />
+            </resource>
+        </item>
+    </look>
+</magicpwd>

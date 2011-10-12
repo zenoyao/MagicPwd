@@ -1,0 +1,10 @@
+<magicpwd>
+    <look group="Alloy">
+        <item id="Alloy" text="Alloy" tips="Alloy" type="user" class="com.incors.plaf.alloy.AlloyLookAndFeel" decorated="false">
+            <property>
+                <string key="alloy.licenseCode" value="X#aa@aa.com#18higyv#a0zqu8"/>
+                <string key="alloy.theme" value="glass"/>
+            </property>
+        </item>
+    </look>
+</magicpwd>

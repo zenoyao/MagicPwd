@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicpwd>
+    <!--魔方密码工具栏-->
+    <toolbar id="mgtd">
+        <item type="normal" text="$P30F6701" text-def="查看" tips="$P30F6702" tips-def="查看选择的记录">
+            <icon>
+                <default id="view-keys" path="var:mwiz-view"/>
+            </icon>
+            <action id="view-keys" class="com.magicpwd.e.mgtd.ViewAction">
+                <stroke key="^ V" />
+            </action>
+        </item>
+        <seperator />
+        <item type="normal" text="$P30F6703" text-def="新增" tips="$P30F6704" tips-def="新增记录">
+            <icon>
+                <default id="new-keys" path="var:mwiz-add"/>
+            </icon>
+            <action id="new-keys" class="com.magicpwd.e.mgtd.NewAction">
+                <stroke key="^ N" />
+            </action>
+        </item>
+        <item type="normal" text="$P30F6705" text-def="编辑" tips="$P30F6706" tips-def="编辑选择的记录">
+            <icon>
+                <default id="edit-keys" path="var:mwiz-edit"/>
+            </icon>
+            <action id="edit-keys" class="com.magicpwd.e.mgtd.UpdateAction">
+                <stroke key="^ E" />
+            </action>
+        </item>
+        <item type="normal" text="$P30F6707" text-def="删除" tips="$P30F6708" tips-def="删除选择的记录">
+            <icon>
+                <default id="delete-keys" path="var:mwiz-delete"/>
+            </icon>
+            <action id="delete-keys" class="com.magicpwd.e.mgtd.DeleteAction">
+                <stroke key="^ D" />
+            </action>
+        </item>
+    </toolbar>
+    <strokes id="mgtd">
+        <action id="file-search" class="com.magicpwd.e.mgtd.FindAction">
+            <stroke key="^ F" />
+        </action>
+        <action id="exit-window" class="com.magicpwd.e.mgtd.ExitAction">
+            <stroke key="^ Q" />
+        </action>
+        <action id="lock-window" class="com.magicpwd.e.mgtd.LockAction">
+            <stroke key="^ L" />
+        </action>
+        <action id="hide-window" class="com.magicpwd.e.mgtd.HideAction">
+            <stroke key="^ H" />
+            <stroke key="^ Enter" />
+        </action>
+        <action id="show-mpro" class="com.magicpwd.e.tray.MproAction">
+            <stroke key="^ # P" />
+        </action>
+        <action id="show-mwiz" class="com.magicpwd.e.tray.MwizAction">
+            <stroke key="^ # W" />
+        </action>
+        <action id="show-mwiz" class="com.magicpwd.e.tray.MpadAction">
+            <stroke key="^ # N" />
+        </action>
+    </strokes>
+</magicpwd>
