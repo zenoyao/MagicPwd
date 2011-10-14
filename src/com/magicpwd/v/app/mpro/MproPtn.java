@@ -59,19 +59,19 @@ import com.magicpwd._util.Util;
 import com.magicpwd.d.db.DBA4000;
 import com.magicpwd.m.HintMdl;
 import com.magicpwd.m.UserMdl;
-import com.magicpwd.m.mpro.GridMdl;
+import com.magicpwd.m.mpro.AttModel;
 import com.magicpwd.m.mpro.MproMdl;
-import com.magicpwd.m.mpro.KindMdl;
-import com.magicpwd.r.KeysCR;
-import com.magicpwd.r.KindTN;
-import com.magicpwd.r.TreeCR;
+import com.magicpwd.m.mpro.CatModel;
+import com.magicpwd.r.mpro.KeyCellRenderer;
+import com.magicpwd.r.mpro.CatNode;
+import com.magicpwd.r.mpro.CatCellRenderer;
 import com.magicpwd.v.app.HintBar;
 import com.magicpwd.v.app.MenuPtn;
 import com.magicpwd.v.app.mail.MailPtn;
 import com.magicpwd.v.app.tray.TrayPtn;
 import com.magicpwd.x.app.MdiDialog;
 import com.magicpwd.x.app.mail.MailOpt;
-import com.magicpwd.x.app.mpro.TpltDialog;
+import com.magicpwd.x.app.mpro.LibDialog;
 
 public class MproPtn extends AMpwdPtn
 {
@@ -83,7 +83,7 @@ public class MproPtn extends AMpwdPtn
     private MailPtn mailPtn;
     private HistDlg histDlg;
     private MdiDialog cfgForm;
-    private TpltDialog tpltDlg;
+    private LibDialog tpltDlg;
     private MenuPtn menuPtn;
     private MproMdl mproMdl;
     /**口令列表上次选择索引*/
@@ -331,7 +331,7 @@ public class MproPtn extends AMpwdPtn
 
     public boolean saveKeys()
     {
-        GridMdl gridMdl = mproMdl.getGridMdl();
+        AttModel gridMdl = mproMdl.getGridMdl();
         // 是否需要保存
         if (gridMdl.getRowCount() < ConsEnv.PWDS_HEAD_SIZE)
         {
@@ -357,7 +357,7 @@ public class MproPtn extends AMpwdPtn
                 return false;
             }
 
-            KindTN node = (KindTN) path.getLastPathComponent();
+            CatNode node = (CatNode) path.getLastPathComponent();
             Mcat kind = (Mcat) node.getUserObject();
             if (!isKindValidate(kind))
             {
@@ -764,7 +764,7 @@ public class MproPtn extends AMpwdPtn
         sp.setOneTouchExpandable(true);
 
         trGuidTree = new javax.swing.JTree();
-        trGuidTree.setCellRenderer(new TreeCR());
+        trGuidTree.setCellRenderer(new CatCellRenderer());
         trGuidTree.getSelectionModel().setSelectionMode(javax.swing.tree.TreeSelectionModel.SINGLE_TREE_SELECTION);
         javax.swing.ToolTipManager.sharedInstance().registerComponent(trGuidTree);
         trGuidTree.addTreeSelectionListener(new javax.swing.event.TreeSelectionListener()
@@ -927,7 +927,7 @@ public class MproPtn extends AMpwdPtn
                 lsGuidListMouseEvent(e);
             }
         });
-        keysCR = new KeysCR(this);
+        keysCR = new KeyCellRenderer(this);
         String layout = userMdl.getCfg(ConsCfg.CFG_VIEW_LIST_LAY, "16");
         if (Char.isValidatePositiveInteger(layout))
         {
@@ -1053,9 +1053,9 @@ public class MproPtn extends AMpwdPtn
         }
 
         Object obj = path.getLastPathComponent();
-        if (obj instanceof KindTN)
+        if (obj instanceof CatNode)
         {
-            KindTN item = (KindTN) obj;
+            CatNode item = (CatNode) obj;
             Mcat kind = (Mcat) item.getUserObject();
             if (!isKindValidate(kind))
             {
@@ -1483,7 +1483,7 @@ public class MproPtn extends AMpwdPtn
     {
         if (tpltDlg == null)
         {
-            tpltDlg = new TpltDialog(this);
+            tpltDlg = new LibDialog(this);
             tpltDlg.initView();
             tpltDlg.initLang();
             tpltDlg.initData();
@@ -1574,7 +1574,7 @@ public class MproPtn extends AMpwdPtn
         histDlg.setVisible(true);
     }
 
-    public KindMdl getTreeMdl()
+    public CatModel getTreeMdl()
     {
         return mproMdl.getKindMdl();
     }
@@ -1760,5 +1760,5 @@ public class MproPtn extends AMpwdPtn
     private javax.swing.JPopupMenu kindPop;
     private javax.swing.JPopupMenu listPop;
     private javax.swing.JPopupMenu gridPop;
-    private KeysCR keysCR;
+    private KeyCellRenderer keysCR;
 }

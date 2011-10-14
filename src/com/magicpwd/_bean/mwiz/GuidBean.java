@@ -18,7 +18,7 @@ package com.magicpwd._bean.mwiz;
 
 import com.magicpwd.__i.IEditItem;
 import com.magicpwd._comn.item.GuidItem;
-import com.magicpwd._comn.prop.Tplt;
+import com.magicpwd._comn.prop.Mlib;
 import com.magicpwd._comp.BtnLabel;
 import com.magicpwd._cons.ConsEnv;
 import com.magicpwd._cons.LangRes;
@@ -177,8 +177,8 @@ public class GuidBean extends javax.swing.JPanel
             return;
         }
 
-        Tplt tplt = null;
-        for (Tplt temp : normPtn.getUserMdl().getTpltMdl().getAllItems())
+        Mlib tplt = null;
+        for (Mlib temp : normPtn.getUserMdl().getTpltMdl().getAllItems())
         {
             if (kind.equals(temp.getP30F1103()))
             {
@@ -213,7 +213,7 @@ public class GuidBean extends javax.swing.JPanel
             return false;
         }
 
-        Tplt tplt = (Tplt) obj;
+        Mlib tplt = (Mlib) obj;
         IEditItem guidItem = keysMdl.getItemAt(ConsEnv.PWDS_HEAD_GUID);
         if (!Char.isValidate(guidItem.getData()))
         {

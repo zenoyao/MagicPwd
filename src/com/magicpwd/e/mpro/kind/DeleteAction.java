@@ -20,7 +20,7 @@ import com.magicpwd.__a.mpro.AMproAction;
 import com.magicpwd._comn.mpwd.Mcat;
 import com.magicpwd._cons.LangRes;
 import com.magicpwd._util.Lang;
-import com.magicpwd.r.KindTN;
+import com.magicpwd.r.mpro.CatNode;
 
 /**
  *
@@ -43,12 +43,12 @@ public class DeleteAction extends AMproAction
         }
 
         Object obj = path.getLastPathComponent();
-        if (obj == null || !(obj instanceof KindTN))
+        if (obj == null || !(obj instanceof CatNode))
         {
             return;
         }
 
-        KindTN node = (KindTN) obj;
+        CatNode node = (CatNode) obj;
         if (node.isRoot())
         {
             return;

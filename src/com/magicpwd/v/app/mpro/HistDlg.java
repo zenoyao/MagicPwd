@@ -28,7 +28,7 @@ import com.magicpwd._util.Char;
 import com.magicpwd._util.Lang;
 import com.magicpwd._util.Logs;
 import com.magicpwd.d.db.DBA4000;
-import com.magicpwd.m.mpro.GridMdl;
+import com.magicpwd.m.mpro.AttModel;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.DefaultListModel;
@@ -46,10 +46,10 @@ public class HistDlg extends javax.swing.JDialog
     private List<S1S2> hist;
     private List<IEditItem> ls_ItemList;
     private DefaultListModel lm_HistList;
-    private GridMdl gridMdl;
+    private AttModel gridMdl;
     private MproPtn mproPtn;
 
-    public HistDlg(MproPtn mproPtn, GridMdl gridMdl)
+    public HistDlg(MproPtn mproPtn, AttModel gridMdl)
     {
         super(mproPtn, true);
         this.mproPtn = mproPtn;

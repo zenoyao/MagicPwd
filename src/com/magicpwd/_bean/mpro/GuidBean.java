@@ -20,7 +20,7 @@ import com.magicpwd.__i.IEditItem;
 import com.magicpwd.__i.mpro.IMproBean;
 import com.magicpwd._comp.WEditBox;
 import com.magicpwd._comn.item.GuidItem;
-import com.magicpwd._comn.prop.Tplt;
+import com.magicpwd._comn.prop.Mlib;
 import com.magicpwd._comp.BtnLabel;
 import com.magicpwd._cons.ConsDat;
 import com.magicpwd._cons.ConsEnv;
@@ -179,8 +179,8 @@ public class GuidBean extends javax.swing.JPanel implements IMproBean
             return;
         }
 
-        Tplt tplt = null;
-        for (Tplt temp : mainPtn.getUserMdl().getTpltMdl().getAllItems())
+        Mlib tplt = null;
+        for (Mlib temp : mainPtn.getUserMdl().getTpltMdl().getAllItems())
         {
             if (kind.equals(temp.getP30F1103()))
             {
@@ -217,7 +217,7 @@ public class GuidBean extends javax.swing.JPanel implements IMproBean
             return;
         }
 
-        Tplt tplt = (Tplt) obj;
+        Mlib tplt = (Mlib) obj;
         itemData.setSpec(GuidItem.SPEC_GUID_TPLT, tplt.getP30F1103());
 
         mainPtn.updateSelectedItem();

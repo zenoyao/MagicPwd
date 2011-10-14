@@ -23,7 +23,7 @@ import com.magicpwd._cons.LangRes;
 import com.magicpwd._enum.AuthLog;
 import com.magicpwd._user.UserDto;
 import com.magicpwd._util.Lang;
-import com.magicpwd.r.KindTN;
+import com.magicpwd.r.mpro.CatNode;
 
 /**
  *
@@ -65,7 +65,7 @@ public class ExportByKindAction extends AMproAction implements IBackCall<AuthLog
         if (AuthLog.signRs == options)
         {
             javax.swing.tree.TreePath path = mproPtn.getSelectedKindValue();
-            KindTN node = (KindTN) path.getLastPathComponent();
+            CatNode node = (CatNode) path.getLastPathComponent();
             Mcat kind = (Mcat) node.getUserObject();
             return mproPtn.exportByKind(kind.getC2010203());
         }

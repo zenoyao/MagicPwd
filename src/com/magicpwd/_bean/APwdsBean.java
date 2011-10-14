@@ -19,7 +19,7 @@ package com.magicpwd._bean;
 import com.magicpwd.__a.AEditBean;
 import com.magicpwd.__a.AMpwdPtn;
 import com.magicpwd._comn.item.PwdsItem;
-import com.magicpwd._comn.prop.Char;
+import com.magicpwd._comn.prop.Mucs;
 import com.magicpwd._comp.BtnLabel;
 import com.magicpwd._comp.WButtonGroup;
 import com.magicpwd._cons.ConsCfg;
@@ -367,14 +367,14 @@ public abstract class APwdsBean extends AEditBean
         {
             return ConsCfg.DEF_PWDS_CHAR;
         }
-        for (Char item : formPtn.getUserMdl().getCharMdl().getCharSys())
+        for (Mucs item : formPtn.getUserMdl().getCharMdl().getCharSys())
         {
             if (hash.equals(item.getP30F2103()))
             {
                 return item.getP30F2106();
             }
         }
-        for (Char item : formPtn.getUserMdl().getCharMdl().getCharUsr())
+        for (Mucs item : formPtn.getUserMdl().getCharMdl().getCharUsr())
         {
             if (hash.equals(item.getP30F2103()))
             {
@@ -406,10 +406,10 @@ public abstract class APwdsBean extends AEditBean
 
         muCharMenu.addSeparator();
 
-        java.util.List<Char> list = formPtn.getUserMdl().getCharMdl().getCharSys();
+        java.util.List<Mucs> list = formPtn.getUserMdl().getCharMdl().getCharSys();
         int cnt = list.size();
 
-        Char charItem;
+        Mucs charItem;
         javax.swing.JCheckBoxMenuItem menuItem;
         for (int i = 0; i < cnt; i += 1)
         {

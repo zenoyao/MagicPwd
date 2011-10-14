@@ -40,8 +40,8 @@ public final class UserMdl
      */
     private boolean ucsUpdt;
     private MpwdMdl mpwdMdl;
-    private TpltMdl tpltMdl;
-    private CharMdl charMdl;
+    private LibList tpltMdl;
+    private UcsList charMdl;
     private HintMdl hintMdl;
     private AppView appView = AppView.mwiz;
     private java.util.Properties userCfg;
@@ -700,11 +700,11 @@ public final class UserMdl
     /**
      * @return the tpltMdl
      */
-    public TpltMdl getTpltMdl()
+    public LibList getTpltMdl()
     {
         if (tpltMdl == null)
         {
-            tpltMdl = new TpltMdl(this);
+            tpltMdl = new LibList(this);
             tpltMdl.initData();
         }
         return tpltMdl;
@@ -713,11 +713,11 @@ public final class UserMdl
     /**
      * @return the charMdl
      */
-    public CharMdl getCharMdl()
+    public UcsList getCharMdl()
     {
         if (charMdl == null)
         {
-            charMdl = new CharMdl(this);
+            charMdl = new UcsList(this);
             charMdl.initData();
         }
         return charMdl;

@@ -19,11 +19,11 @@ package com.magicpwd._prop;
 import javax.swing.DefaultComboBoxModel;
 
 import com.magicpwd.__i.IPropBean;
-import com.magicpwd._comn.prop.Char;
+import com.magicpwd._comn.prop.Mucs;
 import com.magicpwd._comp.IcoLabel;
 import com.magicpwd._cons.LangRes;
 import com.magicpwd._util.Lang;
-import com.magicpwd.m.CharMdl;
+import com.magicpwd.m.UcsList;
 import com.magicpwd.r.ListCR;
 import com.magicpwd.v.app.mpro.MproPtn;
 
@@ -37,7 +37,7 @@ public class CharProp extends javax.swing.JPanel implements IPropBean
     /**
      * 当前编辑的字符空间
      */
-    private Char charItem;
+    private Mucs charItem;
     private boolean isUpdate;
     private MproPtn mainPtn;
 
@@ -67,17 +67,17 @@ public class CharProp extends javax.swing.JPanel implements IPropBean
     {
         if (cbCharTplt.getItemCount() < 1)
         {
-            CharMdl cm = mainPtn.getUserMdl().getCharMdl();
+            UcsList cm = mainPtn.getUserMdl().getCharMdl();
             lsCharList.setModel(cm);
 
             DefaultComboBoxModel cm_CharTplt = new DefaultComboBoxModel();
-            Char c = new Char();
+            Mucs c = new Mucs();
             c.setP30F2103("0");
             c.setP30F2104(Lang.getLang(LangRes.P30F1114, "请选择"));
             c.setP30F2105(Lang.getLang(LangRes.P30F1114, "请选择"));
             c.setP30F2106("");
             cm_CharTplt.addElement(c);
-            for (Char item : cm.getCharSys())
+            for (Mucs item : cm.getCharSys())
             {
                 cm_CharTplt.addElement(item);
             }
@@ -359,7 +359,7 @@ public class CharProp extends javax.swing.JPanel implements IPropBean
 
     private void apndDataActionPerformed(java.awt.event.ActionEvent evt)
     {
-        charItem = new Char();
+        charItem = new Mucs();
         cbCharTplt.setSelectedIndex(0);
         lsCharList.setSelectedIndex(-1);
         showInfo(charItem);
@@ -386,7 +386,7 @@ public class CharProp extends javax.swing.JPanel implements IPropBean
 
         if (charItem == null)
         {
-            charItem = new Char();
+            charItem = new Mucs();
         }
         charItem.setP30F2104(name);
         charItem.setP30F2105(tfCharTips.getText());
@@ -400,7 +400,7 @@ public class CharProp extends javax.swing.JPanel implements IPropBean
             mainPtn.getUserMdl().getCharMdl().appendItem(charItem);
         }
 
-        charItem = new Char();
+        charItem = new Mucs();
         cbCharTplt.setSelectedIndex(0);
         showInfo(charItem);
         isUpdate = false;
@@ -421,7 +421,7 @@ public class CharProp extends javax.swing.JPanel implements IPropBean
         }
 
         mainPtn.getUserMdl().getCharMdl().removeItemAt(lsCharList.getSelectedIndex());
-        charItem = new Char();
+        charItem = new Mucs();
         showInfo(charItem);
         isUpdate = false;
         mainPtn.getUserMdl().setUcsTemplateUpdated(true);
@@ -429,7 +429,7 @@ public class CharProp extends javax.swing.JPanel implements IPropBean
 
     private void lsCharListValueChanged(javax.swing.event.ListSelectionEvent evt)
     {
-        charItem = (Char) lsCharList.getSelectedValue();
+        charItem = (Mucs) lsCharList.getSelectedValue();
         if (charItem == null)
         {
             return;
@@ -442,7 +442,7 @@ public class CharProp extends javax.swing.JPanel implements IPropBean
 
     private void cbCharTpltItemStateChanged(java.awt.event.ItemEvent evt)
     {
-        Char item = (Char) cbCharTplt.getSelectedItem();
+        Mucs item = (Mucs) cbCharTplt.getSelectedItem();
         taCharSets.setText(item.getP30F2106());
     }
 
@@ -450,7 +450,7 @@ public class CharProp extends javax.swing.JPanel implements IPropBean
      * 显示字符空间信息
      * @param item
      */
-    private void showInfo(Char item)
+    private void showInfo(Mucs item)
     {
         tfCharName.setText(item.getP30F2104());
         tfCharTips.setText(item.getP30F2105());

@@ -27,8 +27,8 @@ import com.magicpwd._comn.I1S2;
 import com.magicpwd._comn.mpwd.Mexp;
 import com.magicpwd._comn.mpwd.MgtdHeader;
 import com.magicpwd._comn.mpwd.MgtdDetail;
-import com.magicpwd._comn.prop.Char;
-import com.magicpwd._comn.prop.Tplt;
+import com.magicpwd._comn.prop.Mucs;
+import com.magicpwd._comn.prop.Mlib;
 import com.magicpwd._cons.ConsCfg;
 import com.magicpwd._cons.ConsEnv;
 import com.magicpwd._cons.ConsDat;
@@ -1786,9 +1786,9 @@ public class DBA4000
         return list;
     }
 
-    public static List<Tplt> selectTpltData(UserMdl userMdl, String hash)
+    public static List<Mlib> selectTpltData(UserMdl userMdl, String hash)
     {
-        List<Tplt> kindList = new ArrayList<Tplt>();
+        List<Mlib> kindList = new ArrayList<Mlib>();
 
         DBAccess dba = new DBAccess();
 
@@ -1811,10 +1811,10 @@ public class DBA4000
             dba.addSort(DBC4000.P30F1101, true);
 
             ResultSet rest = dba.executeSelect();
-            Tplt item;
+            Mlib item;
             while (rest.next())
             {
-                item = new Tplt();
+                item = new Mlib();
                 item.setP30F1101(rest.getInt(DBC4000.P30F1101));
                 item.setP30F1102(rest.getInt(DBC4000.P30F1102));
                 item.setP30F1103(rest.getString(DBC4000.P30F1103));
@@ -1839,7 +1839,7 @@ public class DBA4000
         return kindList;
     }
 
-    public static boolean deleteTpltData(UserMdl userMdl, Tplt tpltItem)
+    public static boolean deleteTpltData(UserMdl userMdl, Mlib tpltItem)
     {
         DBAccess dba = new DBAccess();
 
@@ -1863,7 +1863,7 @@ public class DBA4000
         }
     }
 
-    public static boolean saveTpltData(UserMdl userMdl, Tplt tpltItem)
+    public static boolean saveTpltData(UserMdl userMdl, Mlib tpltItem)
     {
         DBAccess dba = new DBAccess();
 
@@ -1975,7 +1975,7 @@ public class DBA4000
         }
     }
 
-    public static boolean deleteCharData(UserMdl userMdl, Char charItem)
+    public static boolean deleteCharData(UserMdl userMdl, Mucs charItem)
     {
         DBAccess dba = new DBAccess();
 
@@ -2001,7 +2001,7 @@ public class DBA4000
         }
     }
 
-    public static boolean saveCharData(UserMdl userMdl, Char charItem)
+    public static boolean saveCharData(UserMdl userMdl, Mucs charItem)
     {
         DBAccess dba = new DBAccess();
 
@@ -2159,9 +2159,9 @@ public class DBA4000
      * 读取字符空间列表
      * @return
      */
-    public static List<Char> selectCharData(UserMdl userMdl)
+    public static List<Mucs> selectCharData(UserMdl userMdl)
     {
-        List<Char> charList = new LinkedList<Char>();
+        List<Mucs> charList = new LinkedList<Mucs>();
 
         DBAccess dba = new DBAccess();
 
@@ -2177,10 +2177,10 @@ public class DBA4000
             dba.addSort(DBC4000.P30F2101, true);
 
             ResultSet rest = dba.executeSelect();
-            Char charItem;
+            Mucs charItem;
             while (rest.next())
             {
-                charItem = new Char();
+                charItem = new Mucs();
                 charItem.setP30F2103(rest.getString(DBC4000.P30F2103));
                 charItem.setP30F2104(rest.getString(DBC4000.P30F2104));
                 charItem.setP30F2105(rest.getString(DBC4000.P30F2105));

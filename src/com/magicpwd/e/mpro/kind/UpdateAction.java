@@ -20,8 +20,8 @@ import com.magicpwd.__a.mpro.AMproAction;
 import com.magicpwd.__i.IBackCall;
 import com.magicpwd._comn.mpwd.Mcat;
 import com.magicpwd._util.Lang;
-import com.magicpwd.r.KindTN;
-import com.magicpwd.v.app.mpro.KindDlg;
+import com.magicpwd.r.mpro.CatNode;
+import com.magicpwd.v.app.mpro.CatDialog;
 
 /**
  *
@@ -44,12 +44,12 @@ public class UpdateAction extends AMproAction implements IBackCall<String, Mcat>
         }
 
         Object obj = path.getLastPathComponent();
-        if (obj == null || !(obj instanceof KindTN))
+        if (obj == null || !(obj instanceof CatNode))
         {
             return;
         }
 
-        KindTN node = (KindTN) obj;
+        CatNode node = (CatNode) obj;
         if (node.isRoot())
         {
             return;
@@ -62,7 +62,7 @@ public class UpdateAction extends AMproAction implements IBackCall<String, Mcat>
             return;
         }
 
-        KindDlg kindDlg = new KindDlg(mproPtn, this);
+        CatDialog kindDlg = new CatDialog(mproPtn, this);
         kindDlg.initView();
         kindDlg.initLang();
         kindDlg.initData(kind);

@@ -17,7 +17,7 @@
 package com.magicpwd._prop;
 
 import com.magicpwd.__i.IPropBean;
-import com.magicpwd._comn.prop.Char;
+import com.magicpwd._comn.prop.Mucs;
 import com.magicpwd._comn.S1S1;
 import com.magicpwd._cons.ConsCfg;
 import com.magicpwd._cons.LangRes;
@@ -113,13 +113,13 @@ public class USetProp extends javax.swing.JPanel implements IPropBean
         cb_UserLang.setSelectedItem(new S1S1(mainPtn.getUserMdl().getLang(), ""));
 
         cb_PwdsChar.removeAllItems();
-        Char cher = new Char();
+        Mucs cher = new Mucs();
         cher.setP30F2103(ConsCfg.DEF_PWDS_HASH);
         cher.setP30F2104(Lang.getLang(LangRes.P30F7C06, "默认"));
         cher.setP30F2106(ConsCfg.DEF_PWDS_CHAR);
         cb_PwdsChar.addItem(cher);
         UserMdl userMdl = mainPtn.getUserMdl();
-        for (Char item : userMdl.getCharMdl().getCharSys())
+        for (Mucs item : userMdl.getCharMdl().getCharSys())
         {
             cb_PwdsChar.addItem(item);
             if (item.getP30F2103().equals(userMdl.getPwdsKey()))
@@ -127,7 +127,7 @@ public class USetProp extends javax.swing.JPanel implements IPropBean
                 cb_PwdsChar.setSelectedItem(item);
             }
         }
-        for (Char item : userMdl.getCharMdl().getCharUsr())
+        for (Mucs item : userMdl.getCharMdl().getCharUsr())
         {
             cb_PwdsChar.addItem(item);
             if (item.getP30F2103().equals(userMdl.getPwdsKey()))
@@ -161,9 +161,9 @@ public class USetProp extends javax.swing.JPanel implements IPropBean
         }
 
         obj = cb_PwdsChar.getSelectedItem();
-        if (obj != null && obj instanceof Char)
+        if (obj != null && obj instanceof Mucs)
         {
-            userMdl.setPwdsKey(((Char) obj).getP30F2103());
+            userMdl.setPwdsKey(((Mucs) obj).getP30F2103());
         }
 
         String txt = tf_PwdsSize.getText().trim();

@@ -18,7 +18,7 @@ package com.magicpwd._util;
 
 import com.magicpwd.__i.IEditItem;
 import com.magicpwd._cons.ConsEnv;
-import com.magicpwd.m.mpro.GridMdl;
+import com.magicpwd.m.mpro.AttModel;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;
@@ -43,9 +43,9 @@ import org.dom4j.io.SAXReader;
 public class Card
 {
 
-    private GridMdl gridMdl;
+    private AttModel gridMdl;
 
-    public Card(GridMdl gridMdl)
+    public Card(AttModel gridMdl)
     {
         this.gridMdl = gridMdl;
     }

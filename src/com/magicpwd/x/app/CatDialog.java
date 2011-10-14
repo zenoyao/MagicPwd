@@ -22,7 +22,7 @@ import com.magicpwd._comn.mpwd.Mcat;
 import com.magicpwd._cons.LangRes;
 import com.magicpwd._util.Bean;
 import com.magicpwd._util.Lang;
-import com.magicpwd.r.KindTN;
+import com.magicpwd.r.mpro.CatNode;
 import com.magicpwd.v.app.mpro.MproPtn;
 
 /**
@@ -136,9 +136,9 @@ public class CatDialog extends ADialog
         }
 
         Object obj = tp.getLastPathComponent();
-        if (obj instanceof KindTN)
+        if (obj instanceof CatNode)
         {
-            KindTN item = (KindTN) obj;
+            CatNode item = (CatNode) obj;
             Mcat kind = (Mcat) item.getUserObject();
             backCall.callBack(IBackCall.OPTIONS_APPLY, kind.getC2010203());
         }
